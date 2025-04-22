@@ -1,0 +1,80 @@
+.service-card {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 8px rgba(30,41,59,0.08);
+  transition: box-shadow 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.service-card:hover {
+  box-shadow: 0 8px 24px rgba(30,41,59,0.16);
+}
+
+.service-card-bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 8rem;
+  width: 8rem;
+  background: #f0fdfa;
+  border-bottom-left-radius: 9999px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  z-index: 1;
+}
+
+.service-card:hover .service-card-bg {
+  opacity: 1;
+}
+
+.service-card-icon {
+  margin-bottom: 1.25rem;
+  z-index: 2;
+  position: relative;
+}
+
+.service-card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 0.75rem;
+  color: #1e293b;
+  z-index: 2;
+  position: relative;
+}
+
+.service-card-desc {
+  color: #64748b;
+  margin-bottom: 1.25rem;
+  z-index: 2;
+  position: relative;
+}
+
+.service-card-btn {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  color: var(--color-primary);
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s;
+  z-index: 2;
+  position: relative;
+  font-size: 1rem;
+  padding: 0;
+}
+
+.service-card-btn:hover {
+  color: var(--color-dark);
+}
+
+.service-card-arrow {
+  margin-left: 0.25rem;
+  transition: margin-left 0.3s;
+}
+
+.service-card:hover .service-card-arrow {
+  margin-left: 0.5rem;
+}

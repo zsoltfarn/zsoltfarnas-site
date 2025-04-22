@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
+import './ServiceCard.css';
 
 interface ServiceCardProps {
   icon: React.ReactNode;
@@ -9,18 +10,18 @@ interface ServiceCardProps {
 
 const ServiceCard: React.FC<ServiceCardProps> = ({ icon, title, description }) => {
   return (
-    <div className="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 group relative overflow-hidden">
-      <div className="absolute top-0 right-0 h-32 w-32 bg-teal-50 rounded-bl-full opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+    <div className="service-card">
+      <div className="service-card-bg" />
       
-      <div className="mb-5">{icon}</div>
+      <div className="service-card-icon">{icon}</div>
       
-      <h3 className="text-xl font-bold mb-3 text-slate-800">{title}</h3>
+      <h3 className="service-card-title">{title}</h3>
       
-      <p className="text-gray-600 mb-5">{description}</p>
+      <p className="service-card-desc">{description}</p>
       
-      <button className="flex items-center font-medium text-teal-600 hover:text-teal-700 transition-colors duration-300">
+      <button className="service-card-btn">
         Learn More
-        <ArrowRight size={16} className="ml-1 group-hover:ml-2 transition-all duration-300" />
+        <ArrowRight size={16} className="service-card-arrow" />
       </button>
     </div>
   );

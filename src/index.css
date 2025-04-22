@@ -1,5 +1,6 @@
 :root {
   --color-primary: #6082B6;
+  --color-scrolled: #7393B3;
   --color-primary-hover: #B6D0E2;
   --color-accent: #B6D0E2;
   --color-dark: #191970;
@@ -7,6 +8,7 @@
   --color-bg-gradient-to: #1e293b;
   --color-text-light: #fff;
   --color-text-muted: #d1d5db;
+  --color-background: #f9fafb;
 }
 @tailwind base;
 @tailwind components;

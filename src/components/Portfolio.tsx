@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { ExternalLink } from 'lucide-react';
 import PortfolioItem from './PortfolioItem';
+import './Portfolio.css';
 
 // Portfolio data
 const portfolioData = [
@@ -66,28 +67,24 @@ const Portfolio: React.FC = () => {
     : portfolioData.filter(item => item.category === activeCategory);
 
   return (
-    <section id="portfolio" className="py-20 bg-white">
-      <div className="container mx-auto px-4 md:px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-slate-800">Our Portfolio</h2>
-          <div className="w-20 h-1 bg-teal-500 mx-auto mb-6"></div>
-          <p className="max-w-2xl mx-auto text-gray-600 text-lg">
+    <section id="portfolio" className="portfolio-section">
+      <div className="portfolio-container">
+        <div className="portfolio-header">
+          <h2 className="portfolio-title">Our Portfolio</h2>
+          <div className="portfolio-underline"></div>
+          <p className="portfolio-description">
             Explore our recent projects and see how we've helped businesses achieve 
             their digital goals.
           </p>
         </div>
 
         {/* Filter buttons */}
-        <div className="flex flex-wrap justify-center gap-2 mb-12">
+        <div className="portfolio-filters">
           {categories.map((category) => (
             <button
               key={category}
               onClick={() => setActiveCategory(category)}
-              className={`px-5 py-2 rounded-full text-sm font-medium transition-colors duration-300 ${
-                activeCategory === category
-                  ? 'bg-teal-600 text-white'
-                  : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-              }`}
+              className={`portfolio-filter-btn${activeCategory === category ? ' active' : ''}`}
             >
               {category}
             </button>
@@ -95,7 +92,7 @@ const Portfolio: React.FC = () => {
         </div>
 
         {/* Portfolio grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="portfolio-grid">
           {filteredItems.map((item) => (
             <PortfolioItem 
               key={item.id}
@@ -107,13 +104,13 @@ const Portfolio: React.FC = () => {
           ))}
         </div>
 
-        <div className="text-center mt-12">
+        <div className="portfolio-viewall">
           <a 
             href="#" 
-            className="inline-flex items-center px-6 py-3 border-2 border-teal-600 text-teal-600 font-medium rounded-md hover:bg-teal-600 hover:text-white transition-colors duration-300"
+            className="portfolio-viewall-link"
           >
             View All Projects
-            <ExternalLink size={18} className="ml-2" />
+            <ExternalLink size={18} className="portfolio-viewall-link-icon" />
           </a>
         </div>
       </div>

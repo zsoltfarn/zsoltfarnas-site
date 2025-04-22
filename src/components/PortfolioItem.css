@@ -1,0 +1,116 @@
+.portfolio-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 24px rgba(30,41,59,0.12);
+  transition: box-shadow 0.3s;
+}
+
+.portfolio-item:hover {
+  box-shadow: 0 8px 32px rgba(30,41,59,0.18);
+}
+
+.portfolio-item-image-wrapper {
+  position: relative;
+  height: 16rem;
+  overflow: hidden;
+}
+
+.portfolio-item-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+
+.portfolio-item:hover .portfolio-item-image {
+  transform: scale(1.1);
+}
+
+.portfolio-item-gradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+  transition: opacity 0.3s;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.portfolio-item:hover .portfolio-item-gradient,
+.portfolio-item.is-hovered .portfolio-item-gradient {
+  opacity: 1;
+}
+
+.portfolio-item-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1.5rem;
+  color: #fff;
+  transform: translateY(1.5rem);
+  transition: transform 0.3s;
+}
+
+.portfolio-item:hover .portfolio-item-content {
+  transform: translateY(0);
+}
+
+.portfolio-item-category {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.875rem;
+  background: var(--color-primary);
+  border-radius: 9999px;
+  margin-bottom: 0.75rem;
+}
+
+.portfolio-item-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.portfolio-item-desc {
+  font-size: 0.95rem;
+  color: #e5e7eb;
+  margin-bottom: 1rem;
+  opacity: 0;
+  transition: opacity 0.3s 0.1s;
+}
+
+.portfolio-item:hover .portfolio-item-desc {
+  opacity: 1;
+}
+
+.portfolio-item-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.portfolio-item-tag {
+  font-size: 0.75rem;
+  padding: 0.25rem 0.5rem;
+  background: rgba(255,255,255,0.2);
+  border-radius: 9999px;
+}
+
+.portfolio-item-link {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.portfolio-item-link:hover {
+  color: var(--color-scrolled);
+}
+
+.portfolio-item-link-icon {
+  margin-left: 0.25rem;
+}

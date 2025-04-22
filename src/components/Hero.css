@@ -113,7 +113,7 @@
 
 .hero-btn-secondary:hover {
   background: #fff;
-  color: #0f172a; /* hover:text-slate-900 */
+  color: var(--color-bg-gradient-from); /* hover:text-slate-900 */
   transform: translateY(-2px);
 }
 
