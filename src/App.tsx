@@ -5,6 +5,7 @@ import Services from './components/Services';
 import Portfolio from './components/Portfolio';
 import Pricing from './components/Pricing';
 import Contact from './components/Contact';
+import ScrollToTopButton from './components/ScrollToTopButton';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Portfolio />
       <Pricing />
       <Contact />
+      <ScrollToTopButton />
     </div>
   );
 }

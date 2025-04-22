@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, ChevronRight } from 'lucide-react';
 import { Link } from './ui/Link';
+import './Navbar.css';
 
 const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -17,26 +18,17 @@ const Navbar: React.FC = () => {
 
   return (
     <nav 
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled 
-          ? 'bg-white shadow-md py-3' 
-          : 'bg-transparent py-5'
-      }`}
+      className={`navbar ${isScrolled ? 'navbar-scrolled' : 'navbar-top'}`}
     >
       <div className="container mx-auto px-4 md:px-6 flex justify-between items-center">
         <div className="flex items-center">
-          <img 
-            src="/logo.svg" 
-            alt="ZSF Studio Logo"
-            className="h-8 w-auto mr-2"
-          />
-          <span 
-            className={`text-xl font-bold ${
-              isScrolled ? 'text-gray-800' : 'text-white'
-            }`}
-          >
-            Studio
-          </span>
+          <Link href="#home" className="flex items-center">
+            <img
+              src="/logo.svg"
+              alt="ZSF Studio Logo"
+              className={`logo ${isScrolled ? 'logo-scrolled' : ''}`}
+            />
+          </Link>
         </div>
 
         {/* Desktop Menu */}
@@ -45,18 +37,14 @@ const Navbar: React.FC = () => {
             <Link 
               key={item}
               href={`#${item.toLowerCase()}`}
-              className={`font-medium transition-colors duration-200 ${
-                isScrolled 
-                  ? 'text-gray-700 hover:text-teal-600' 
-                  : 'text-gray-100 hover:text-white'
-              }`}
+              className={`navbar-link font-medium transition-colors duration-200`}
             >
               {item}
             </Link>
           ))}
-          <button className="bg-teal-600 hover:bg-teal-700 text-white px-5 py-2 rounded-md flex items-center transition-colors duration-200">
+          <button className="get-started-btn">
             Get Started
-            <ChevronRight size={18} className="ml-1" />
+            <ChevronRight size={18} className="get-started-chevron" />
           </button>
         </div>
 
@@ -87,9 +75,9 @@ const Navbar: React.FC = () => {
                 {item}
               </Link>
             ))}
-            <button className="w-full bg-teal-600 hover:bg-teal-700 text-white px-5 py-3 rounded-md flex items-center justify-center transition-colors duration-200">
+            <button className="get-started-btn">
               Get Started
-              <ChevronRight size={18} className="ml-1" />
+              <ChevronRight size={18} className="get-started-chevron" />
             </button>
           </div>
         </div>
