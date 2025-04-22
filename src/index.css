@@ -1,3 +1,13 @@
+:root {
+  --color-primary: #6082B6;
+  --color-primary-hover: #B6D0E2;
+  --color-accent: #B6D0E2;
+  --color-dark: #191970;
+  --color-bg-gradient-from: #0f172a;
+  --color-bg-gradient-to: #1e293b;
+  --color-text-light: #fff;
+  --color-text-muted: #d1d5db;
+}
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
