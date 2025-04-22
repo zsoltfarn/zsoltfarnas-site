@@ -54,7 +54,7 @@
 
 .hero-desc {
   font-size: 1.125rem;
-  color: var(--color-text-muted);
+  color: var(--color-text-light);
   margin-bottom: 2rem;
   line-height: 1.6;
 }
