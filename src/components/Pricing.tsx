@@ -1,5 +1,6 @@
 import React from 'react';
 import { Check } from 'lucide-react';
+import './Pricing.css';
 
 const Pricing: React.FC = () => {
   const plans = [
@@ -49,48 +50,42 @@ const Pricing: React.FC = () => {
   ];
 
   return (
-    <section id="pricing" className="py-20 bg-gray-50">
-      <div className="container mx-auto px-4 md:px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-slate-800">Transparent Pricing</h2>
-          <div className="w-20 h-1 bg-teal-500 mx-auto mb-6"></div>
-          <p className="max-w-2xl mx-auto text-gray-600 text-lg">
+    <section id="pricing" className="pricing-section">
+      <div className="pricing-container">
+        <div className="pricing-header">
+          <h2 className="pricing-title">Transparent Pricing</h2>
+          <div className="pricing-underline"></div>
+          <p className="pricing-description">
             Choose the perfect plan for your business needs. All plans include our premium support and satisfaction guarantee.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
+        <div className="pricing-grid">
           {plans.map((plan, index) => (
             <div
               key={index}
-              className={`relative bg-white rounded-2xl shadow-lg overflow-hidden transition-transform hover:scale-105 ${
-                plan.isPopular ? 'border-2 border-teal-500' : ''
-              }`}
+              className={`pricing-card${plan.isPopular ? ' popular' : ''}`}
             >
               {plan.isPopular && (
-                <div className="absolute top-0 right-0 bg-teal-500 text-white px-4 py-1 rounded-bl-lg text-sm font-medium">
+                <div className="pricing-popular-badge">
                   Most Popular
                 </div>
               )}
-              <div className="p-8">
-                <h3 className="text-xl font-bold text-slate-800 mb-4">{plan.name}</h3>
-                <div className="mb-6">
-                  <span className="text-4xl font-bold text-slate-800">${plan.price}</span>
-                  <span className="text-gray-500 ml-2">one-time</span>
+              <div className="pricing-card-inner">
+                <h3 className="pricing-card-title">{plan.name}</h3>
+                <div style={{ marginBottom: '1.5rem' }}>
+                  <span className="pricing-card-price">${plan.price}</span>
+                  <span className="pricing-card-price-desc">one-time</span>
                 </div>
-                <ul className="space-y-4 mb-8">
+                <ul className="pricing-card-features">
                   {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-gray-600">
-                      <Check size={20} className="text-teal-500 mr-2 flex-shrink-0" />
+                    <li key={featureIndex} className="pricing-card-feature">
+                      <Check size={20} className="pricing-card-feature-icon" />
                       <span>{feature}</span>
                     </li>
                   ))}
                 </ul>
-                <button className={`w-full py-3 px-6 rounded-lg font-medium transition-colors ${
-                  plan.isPopular
-                    ? 'bg-teal-600 text-white hover:bg-teal-700'
-                    : 'bg-gray-100 text-slate-800 hover:bg-gray-200'
-                }`}>
+                <button className={`pricing-card-btn${plan.isPopular ? ' popular' : ''}`}>
                   Get Started
                 </button>
               </div>

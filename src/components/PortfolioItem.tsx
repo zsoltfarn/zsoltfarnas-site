@@ -18,12 +18,10 @@ interface PortfolioItemProps {
 const PortfolioItem: React.FC<PortfolioItemProps> = ({
   item,
   onMouseEnter,
-  onMouseLeave,
-  isHovered
-}) => {
+  onMouseLeave}) => {
   return (
     <div
-      className={`portfolio-item${isHovered ? ' is-hovered' : ''}`}
+      className="portfolio-item is-hovered"
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
     >

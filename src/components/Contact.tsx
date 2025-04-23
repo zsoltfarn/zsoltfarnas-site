@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Mail, Send } from 'lucide-react';
+import { Send } from 'lucide-react';
+import './Contact.css';
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -24,45 +25,21 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-white">
+    <section id="contact" className="contact-section">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-slate-800">Get In Touch</h2>
-          <div className="w-20 h-1 bg-teal-500 mx-auto mb-6"></div>
-          <p className="max-w-2xl mx-auto text-gray-600 text-lg">
+          <h2 className="contact-title">Get In Touch</h2>
+          <div className="contact-underline"></div>
+          <p className="contact-description">
             Ready to start your project? Contact us today for a free consultation and quote.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
-          <div className="space-y-8">
-            <div className="bg-gray-50 p-6 rounded-lg">
-              <h3 className="text-xl font-bold text-slate-800 mb-6">Contact Information</h3>
-              <div className="space-y-4">
-                <div className="flex items-center">
-                  <Mail className="text-teal-500 mr-3" size={24} />
-                  <div>
-                    <p className="font-medium text-slate-800">Email Us</p>
-                    <a href="mailto:info@zsoltfarnas.com" className="text-gray-600 hover:text-teal-500">
-                      info@zsoltfarnas.com
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-gray-50 p-6 rounded-lg">
-              <h3 className="text-xl font-bold text-slate-800 mb-4">Business Hours</h3>
-              <div className="space-y-2">
-                <p className="text-gray-600">Open 24/7</p>
-              </div>
-            </div>
-          </div>
-
-          <form onSubmit={handleSubmit} className="space-y-6">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div>
-                <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+        <div className="contact-form-container">
+          <form onSubmit={handleSubmit} className="contact-form">
+            <div className="contact-form-row">
+              <div className="contact-form-group">
+                <label htmlFor="name" className="contact-label">
                   Name
                 </label>
                 <input
@@ -71,12 +48,13 @@ const Contact: React.FC = () => {
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent"
+                  className="contact-input"
+                  placeholder="Your name"
                   required
                 />
               </div>
-              <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+              <div className="contact-form-group">
+                <label htmlFor="email" className="contact-label">
                   Email
                 </label>
                 <input
@@ -85,15 +63,16 @@ const Contact: React.FC = () => {
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent"
+                  className="contact-input"
+                  placeholder="your.email@example.com"
                   required
                 />
               </div>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div>
-                <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
+            <div className="contact-form-row">
+              <div className="contact-form-group">
+                <label htmlFor="phone" className="contact-label">
                   Phone
                 </label>
                 <input
@@ -102,11 +81,12 @@ const Contact: React.FC = () => {
                   name="phone"
                   value={formData.phone}
                   onChange={handleChange}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent"
+                  className="contact-input"
+                  placeholder="(Optional)"
                 />
               </div>
-              <div>
-                <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
+              <div className="contact-form-group">
+                <label htmlFor="service" className="contact-label">
                   Service Interested In
                 </label>
                 <select
@@ -114,7 +94,7 @@ const Contact: React.FC = () => {
                   name="service"
                   value={formData.service}
                   onChange={handleChange}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent"
+                  className="contact-input"
                 >
                   <option>Web Development</option>
                   <option>WordPress Development</option>
@@ -125,8 +105,8 @@ const Contact: React.FC = () => {
               </div>
             </div>
 
-            <div>
-              <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+            <div className="contact-form-group">
+              <label htmlFor="message" className="contact-label">
                 Message
               </label>
               <textarea
@@ -134,18 +114,19 @@ const Contact: React.FC = () => {
                 name="message"
                 value={formData.message}
                 onChange={handleChange}
-                rows={6}
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent"
+                rows={4}
+                className="contact-input"
+                placeholder="Tell us about your project..."
                 required
               ></textarea>
             </div>
 
             <button
               type="submit"
-              className="w-full bg-teal-600 text-white py-3 px-6 rounded-lg font-medium hover:bg-teal-700 transition-colors duration-300 flex items-center justify-center"
+              className="contact-submit-btn"
             >
               Send Message
-              <Send size={18} className="ml-2" />
+              <Send size={16} className="ml-2" />
             </button>
           </form>
         </div>

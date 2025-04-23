@@ -11,7 +11,7 @@ const portfolioData = [
     category: 'Web Development',
     image: 'https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750',
     tags: ['React', 'Node.js', 'MongoDB'],
-    description: 'A premium real estate platform with advanced property filtering, virtual tours, and agent dashboards.'
+    description: 'A premium real estate platform with advanced property filtering, virtual tours.'
   },
   {
     id: 2,
@@ -19,7 +19,7 @@ const portfolioData = [
     category: 'E-commerce',
     image: 'https://images.pexels.com/photos/934070/pexels-photo-934070.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750',
     tags: ['WooCommerce', 'WordPress', 'Custom Theme'],
-    description: 'A high-converting fashion store with custom product filters and personalized shopping experience.'
+    description: 'A high-converting fashion store with custom product filters.'
   },
   {
     id: 3,
@@ -35,7 +35,7 @@ const portfolioData = [
     category: 'Web Development',
     image: 'https://images.pexels.com/photos/48604/pexels-photo-48604.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750',
     tags: ['React', 'TypeScript', 'Firebase'],
-    description: 'A secure patient management system with appointment scheduling and medical record handling.'
+    description: 'A secure patient management system with appointment scheduling.'
   },
   {
     id: 5,
@@ -51,7 +51,7 @@ const portfolioData = [
     category: 'Web Development',
     image: 'https://images.pexels.com/photos/907489/pexels-photo-907489.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750',
     tags: ['Vue.js', 'Express', 'PostgreSQL'],
-    description: 'A comprehensive analytics dashboard for business intelligence and performance monitoring.'
+    description: 'A comprehensive analytics dashboard for business intelligence.'
   }
 ];
 
