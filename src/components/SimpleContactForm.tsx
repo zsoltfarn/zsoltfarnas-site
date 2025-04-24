@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { Send, X } from 'lucide-react';
 import './Contact.css';
+import { X } from "lucide-react";
 
 const SimpleContactForm: React.FC = () => {
   const initialFormState = {
@@ -155,8 +155,7 @@ const SimpleContactForm: React.FC = () => {
           <p className="contact-error-message">{submitError}</p>
         )}
         <button type="submit" className="contact-submit-btn" disabled={isSubmitting}>
-          {isSubmitting ? 'Sending...' : 'Send Message'}
-          {!isSubmitting && <Send size={16} className="ml-2" />}
+          {isSubmitting ? 'Sending...' : 'Send'}
         </button>
       </form>
       {showSuccessPopup && (
