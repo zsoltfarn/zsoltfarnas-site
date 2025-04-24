@@ -36,7 +36,22 @@ const Contact: React.FC = () => {
         </div>
 
         <div className="contact-form-container">
-          <form onSubmit={handleSubmit} className="contact-form">
+          <form
+            name="contact"
+            method="POST"
+            data-netlify="true"
+            netlify-honeypot="bot-field"
+            onSubmit={handleSubmit}
+            className="contact-form"
+          >
+            {/* Netlify hidden inputs */}
+            <input type="hidden" name="form-name" value="contact" />
+            <p hidden>
+              <label>
+                Don’t fill this out: <input name="bot-field" />
+              </label>
+            </p>
+
             <div className="contact-form-row">
               <div className="contact-form-group">
                 <label htmlFor="name" className="contact-label">
@@ -121,14 +136,12 @@ const Contact: React.FC = () => {
               ></textarea>
             </div>
 
-            <button
-              type="submit"
-              className="contact-submit-btn"
-            >
+            <button type="submit" className="contact-submit-btn">
               Send Message
               <Send size={16} className="ml-2" />
             </button>
           </form>
+
         </div>
       </div>
     </section>
