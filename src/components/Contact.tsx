@@ -11,22 +11,7 @@ const Contact: React.FC = () => {
     message: ''
   });
 
-  // Updated handleSubmit function for Netlify
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>): void => {
-    e.preventDefault();
-    const form = e.currentTarget;
-
-    const formData = new FormData(form);
-    const data = new URLSearchParams([...formData as never]).toString();
-
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: data,
-    })
-      .then(() => alert("Message sent!"))
-      .catch((error) => alert("Error: " + error));
-  };
+  // Removed the handleSubmit function entirely
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
@@ -47,15 +32,16 @@ const Contact: React.FC = () => {
         </div>
 
         <div className="contact-form-container">
+          {/* Removed the onSubmit prop from the form */}
           <form
             name="contact"
             method="POST"
             data-netlify="true"
             netlify-honeypot="bot-field"
-            onSubmit={handleSubmit} // This now uses the updated function
             className="contact-form"
+            netlify
           >
-            {/* Netlify hidden inputs */}
+            {/* Netlify hidden inputs (keep these) */}
             <input type="hidden" name="form-name" value="contact" />
             <p hidden>
               <label>
@@ -63,6 +49,7 @@ const Contact: React.FC = () => {
               </label>
             </p>
 
+            {/* Form fields remain the same, using state for controlled inputs */}
             <div className="contact-form-row">
               <div className="contact-form-group">
                 <label htmlFor="name" className="contact-label">
@@ -71,7 +58,7 @@ const Contact: React.FC = () => {
                 <input
                   type="text"
                   id="name"
-                  name="name"
+                  name="name" // Netlify uses this name attribute
                   value={formData.name}
                   onChange={handleChange}
                   className="contact-input"
@@ -86,7 +73,7 @@ const Contact: React.FC = () => {
                 <input
                   type="email"
                   id="email"
-                  name="email"
+                  name="email" // Netlify uses this name attribute
                   value={formData.email}
                   onChange={handleChange}
                   className="contact-input"
@@ -104,7 +91,7 @@ const Contact: React.FC = () => {
                 <input
                   type="tel"
                   id="phone"
-                  name="phone"
+                  name="phone" // Netlify uses this name attribute
                   value={formData.phone}
                   onChange={handleChange}
                   className="contact-input"
@@ -117,7 +104,7 @@ const Contact: React.FC = () => {
                 </label>
                 <select
                   id="service"
-                  name="service"
+                  name="service" // Netlify uses this name attribute
                   value={formData.service}
                   onChange={handleChange}
                   className="contact-input"
@@ -137,7 +124,7 @@ const Contact: React.FC = () => {
               </label>
               <textarea
                 id="message"
-                name="message"
+                name="message" // Netlify uses this name attribute
                 value={formData.message}
                 onChange={handleChange}
                 rows={4}
@@ -146,6 +133,7 @@ const Contact: React.FC = () => {
                 required
               ></textarea>
             </div>
+
 
             <button type="submit" className="contact-submit-btn">
               Send Message
