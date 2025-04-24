@@ -11,11 +11,20 @@ const Contact: React.FC = () => {
     message: ''
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  // Updated handleSubmit function for Netlify
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => { // Added type for 'e'
     e.preventDefault();
-    // Handle form submission
-    console.log('Form submitted:', formData);
+    const form = e.target as HTMLFormElement; // Cast target to HTMLFormElement
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      // Pass FormData directly to URLSearchParams
+      body: new URLSearchParams(new FormData(form)).toString(),
+    })
+      .then(() => alert("Message sent!")) // Consider a more integrated success message later
+      .catch((error) => alert("There was an error: " + error));
   };
+
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
@@ -41,7 +50,7 @@ const Contact: React.FC = () => {
             method="POST"
             data-netlify="true"
             netlify-honeypot="bot-field"
-            onSubmit={handleSubmit}
+            onSubmit={handleSubmit} // This now uses the updated function
             className="contact-form"
           >
             {/* Netlify hidden inputs */}
