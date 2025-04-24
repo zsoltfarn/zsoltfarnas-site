@@ -12,19 +12,21 @@ const Contact: React.FC = () => {
   });
 
   // Updated handleSubmit function for Netlify
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => { // Added type for 'e'
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>): void => {
     e.preventDefault();
-    const form = e.target as HTMLFormElement; // Cast target to HTMLFormElement
+    const form = e.currentTarget;
+
+    const formData = new FormData(form);
+    const data = new URLSearchParams([...formData as never]).toString();
+
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      // Pass FormData directly to URLSearchParams
-      body: new URLSearchParams(new FormData(form)).toString(),
+      body: data,
     })
-      .then(() => alert("Message sent!")) // Consider a more integrated success message later
-      .catch((error) => alert("There was an error: " + error));
+      .then(() => alert("Message sent!"))
+      .catch((error) => alert("Error: " + error));
   };
-
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
