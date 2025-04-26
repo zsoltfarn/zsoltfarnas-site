@@ -15,9 +15,7 @@ const Hero: React.FC = () => {
           </h1>
 
           <p className="hero-desc">
-            We build stunning websites and WordPress solutions that drive
-            growth, engage users, and elevate your brand in the digital
-            landscape.
+            We design stunning websites, build high-performance WordPress solutions, and deliver expert SEO optimization services — all aimed at driving growth, engaging your audience, and elevating your brand in the competitive digital world.
           </p>
 
           <div className="hero-btn-row">
