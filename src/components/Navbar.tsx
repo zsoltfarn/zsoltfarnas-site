@@ -24,7 +24,7 @@ const Navbar: React.FC = () => {
         <div className="flex items-center">
           <Link href="#home" className="flex items-center">
             <img
-              src="/logo.svg"
+              src="/zsf-logo-white.svg"
               alt="ZSF Studio Logo"
               className={`logo ${isScrolled ? 'logo-scrolled' : ''}`}
             />

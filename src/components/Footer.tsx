@@ -11,7 +11,7 @@ const Footer: React.FC = () => {
         <div className="footer-grid">
           <div className="footer-about">
             <a href="/">
-              <img src="/logo.svg" alt="Logo" className="footer-logo" width={150} height={30} />
+              <img src="/zsf-logo-white.svg" alt="Logo" className="footer-logo" width={80} height={25} />
             </a>
             <p className="footer-text">
               Professional web development services focused on creating beautiful, 

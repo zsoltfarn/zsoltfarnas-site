@@ -21,7 +21,8 @@
 }
 
 .logo {
-  width: 100px;
+  width: auto;
+  height: 40px;
   max-width: none;
   margin-right: 0.5rem;
   transition: all 0.2s;
