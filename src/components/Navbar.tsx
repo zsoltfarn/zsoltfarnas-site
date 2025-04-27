@@ -20,7 +20,7 @@ const Navbar: React.FC = () => {
     <nav 
       className={`navbar ${isScrolled ? 'navbar-scrolled' : 'navbar-top'}`}
     >
-      <div className="container mx-auto px-4 md:px-6 flex justify-between items-center">
+      <div className="container mx-auto px-4 md:px-14 flex justify-between items-center">
         <div className="flex items-center">
           <Link href="#home" className="flex items-center">
             <img
@@ -32,7 +32,7 @@ const Navbar: React.FC = () => {
         </div>
 
         {/* Desktop Menu */}
-        <div className="hidden md:flex items-center space-x-8">
+        <div className="hidden md:flex items-center space-x-10">
           {['Home', 'Services', 'Portfolio', 'About', 'Contact'].map((item) => (
             <Link 
               key={item}
@@ -63,8 +63,8 @@ const Navbar: React.FC = () => {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="md:hidden bg-white">
-          <div className="px-4 py-5 space-y-4 shadow-lg">
+        <div className="mobile md:hidden bg-white">
+          <div className="px-4 py-4 space-y-5 shadow-lg">
             {['Home', 'Services', 'Portfolio', 'About', 'Contact'].map((item) => (
               <Link 
                 key={item}
