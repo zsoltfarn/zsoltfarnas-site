@@ -106,12 +106,12 @@
   font-weight: 500;
   font-size: 0.95rem;
   cursor: pointer;
-  transition: all 0.3s ease;
+  /* transition: all 0.3s ease; */ /* Remove this line */
   margin-top: 0.5rem;
 }
 
 .contact-submit-btn:hover {
-  transition: all 0.3s ease;
+  /* transition: all 0.3s ease; */ /* Remove this line */
   background-color: var(--color-primary-hover);
   color: var(--color-dark);
   transform: translateY(-2px);

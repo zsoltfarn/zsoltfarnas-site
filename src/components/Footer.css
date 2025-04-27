@@ -2,6 +2,7 @@
   background-color: #1e293b;
   color: #f8fafc;
   padding: 4rem 0 2rem;
+  /* transition: all 0.3s; */ /* Remove this line */
 }
 
 .footer-container {
