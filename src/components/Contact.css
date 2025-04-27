@@ -79,7 +79,6 @@
   border-radius: 8px;
   background-color: #f8fafc;
   font-size: 0.95rem;
-  transition: all 0.2s ease;
 }
 
 .contact-input:focus {
@@ -106,12 +105,10 @@
   font-weight: 500;
   font-size: 0.95rem;
   cursor: pointer;
-  /* transition: all 0.3s ease; */ /* Remove this line */
   margin-top: 0.5rem;
 }
 
 .contact-submit-btn:hover {
-  /* transition: all 0.3s ease; */ /* Remove this line */
   background-color: var(--color-primary-hover);
   color: var(--color-dark);
   transform: translateY(-2px);
@@ -155,7 +152,6 @@
 
 .contact-link {
   color: #4b5563;
-  transition: color 0.2s;
 }
 
 .contact-link:hover {
@@ -167,7 +163,6 @@
   padding: 0.75rem 1rem;
   border: 1px solid #d1d5db;
   border-radius: 0.5rem;
-  transition: all 0.2s;
 }
 
 .contact-input:focus {
@@ -186,7 +181,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background-color 0.3s;
 }
 
 .contact-submit-btn:hover {

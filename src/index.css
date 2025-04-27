@@ -16,7 +16,7 @@
 @tailwind utilities;
 
 * {
-  transition: all 0.3s;
+  transition: all 0.3s ease;
 }
 html {
   scroll-behavior: smooth;

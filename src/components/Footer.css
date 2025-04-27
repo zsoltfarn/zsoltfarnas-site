@@ -2,7 +2,6 @@
   background-color: #1e293b;
   color: #f8fafc;
   padding: 4rem 0 2rem;
-  /* transition: all 0.3s; */ /* Remove this line */
 }
 
 .footer-container {
@@ -57,7 +56,6 @@
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
   color: #fff;
-  transition: all 0.3s ease;
 }
 
 .footer-social-link:hover {
@@ -78,7 +76,6 @@
 .footer-menu-link {
   color: #cbd5e1;
   text-decoration: none;
-  transition: color 0.3s ease;
 }
 
 .footer-menu-link:hover {
@@ -104,7 +101,6 @@
 .footer-contact-link {
   color: #cbd5e1;
   text-decoration: none;
-  transition: color 0.3s ease;
 }
 
 .footer-contact-link:hover {
