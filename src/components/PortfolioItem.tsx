@@ -15,6 +15,26 @@ interface PortfolioItemProps {
   isHovered: boolean;
 }
 
+function generateSrcSet(imageName: string) {
+  const sizes = ['397x256', '794x512', '1191x767', '1460x941'];
+
+  const extensionMatch = imageName.match(/\.(jpeg|jpg|png)$/i);
+
+  if (!extensionMatch) {
+    console.error('Invalid image extension!', imageName);
+    return '';
+  }
+
+  const extension = extensionMatch[0]; // Example: '.jpeg'
+  const baseName = imageName.replace(extension, ''); // remove the extension
+
+  return sizes
+    .map(size => `/images/${baseName}-${size}${extension} ${size.split('x')[0]}w`)
+    .join(', ');
+}
+
+
+
 const PortfolioItem: React.FC<PortfolioItemProps> = ({
   item,
   onMouseEnter,
@@ -27,13 +47,15 @@ const PortfolioItem: React.FC<PortfolioItemProps> = ({
     >
       <div className="portfolio-item-image-wrapper">
         <img
-          src={item.image}
+          src={`/images/${item.image}`}
           alt={item.title}
           className="portfolio-item-image"
+          loading="lazy"
+          srcSet={generateSrcSet(item.image)}
+          sizes="(max-width: 400px) 397px, (max-width: 800px) 794px, (max-width: 1200px) 1191px, 1460px"
         />
         <div className="portfolio-item-gradient" />
       </div>
-
       <div className="portfolio-item-content">
         <span className="portfolio-item-category">
           {item.category}
@@ -64,3 +86,4 @@ const PortfolioItem: React.FC<PortfolioItemProps> = ({
 };
 
 export default PortfolioItem;
+
