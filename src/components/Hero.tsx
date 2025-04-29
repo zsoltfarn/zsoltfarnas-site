@@ -21,7 +21,28 @@ const Hero: React.FC = () => {
 
   return (
     <section id="home" className="hero-section">
-      <div className="hero-bg" />
+      <div className="hero-bg">
+        <picture>
+          <source
+            media="(max-width: 600px)"
+            srcSet="/images/background-397x256.webp"
+          />
+          <source
+            media="(max-width: 1024px)"
+            srcSet="/images/background-794x512.webp"
+          />
+          <source
+            media="(max-width: 1400px)"
+            srcSet="/images/background-1191x767.webp"
+          />
+          <img
+            src="/images/background-1460x941.webp"
+            alt=""
+            style={{ width: '100%', height: '100%', objectFit: 'cover', position: 'absolute', zIndex: -1 }}
+            aria-hidden="true"
+          />
+        </picture>
+      </div>
 
       <div className="hero-container">
         <div ref={headerRef}>
