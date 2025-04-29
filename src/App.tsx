@@ -13,15 +13,21 @@ import ScrollToTopButton from './components/ScrollToTopButton';
 function App() {
   return (
     <reactRouterDom.BrowserRouter>
-      <Navbar />
-      <Hero />
-      <Services />
-      <Portfolio />
-      <Pricing />
-      <Contact />
-      <Footer />
-      <ScrollToTopButton />
+      <reactRouterDom.Routes>
+        <reactRouterDom.Route path="/" element={
+          <>
+            <Navbar />
+            <Hero />
+            <Services />
+            <Portfolio />
+            <Pricing />
+            <Contact />
+            <Footer />
+            <ScrollToTopButton />
+          </>
+        } />
       
+      </reactRouterDom.Routes>
     </reactRouterDom.BrowserRouter>
   );
 }

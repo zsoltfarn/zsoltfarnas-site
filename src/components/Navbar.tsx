@@ -68,7 +68,7 @@ const Navbar: React.FC = () => {
             {['Home', 'Services', 'Portfolio', 'About', 'Contact'].map((item) => (
               <Link 
                 key={item}
-                href={`#${item.toLowerCase()}`}
+                href={item === 'About' ? '/about' : `#${item.toLowerCase()}`}
                 className="block font-medium text-gray-700 hover:text-teal-600"
                 onClick={() => setIsMenuOpen(false)}
               >

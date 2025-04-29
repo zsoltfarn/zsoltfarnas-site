@@ -14,15 +14,19 @@ export const Link: React.FC<LinkProps> = ({
   onClick
 }) => {
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    e.preventDefault();
-    if (onClick) onClick();
-    
-    // Smooth scroll to the target section
-    const targetId = href.replace('#', '');
-    const element = document.getElementById(targetId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+    // Only prevent default for hash links
+    if (href.startsWith('#')) {
+      e.preventDefault();
+      if (onClick) onClick();
+
+      // Smooth scroll to the target section
+      const targetId = href.replace('#', '');
+      const element = document.getElementById(targetId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
     }
+    // For normal links (like /contact.html), do not prevent default
   };
 
   return (

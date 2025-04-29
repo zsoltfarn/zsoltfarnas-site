@@ -2,6 +2,11 @@ import React, { useEffect, useRef, useState } from 'react';
 import { ArrowRight } from 'lucide-react';
 import './Hero.css';
 
+import heroBg397 from '../img/background-397x256.webp';
+import heroBg794 from '../img/background-794x512.webp';
+import heroBg1191 from '../img/background-1191x767.webp';
+import heroBg1460 from '../img/background-1460x941.webp';
+
 const Hero: React.FC = () => {
   const headerRef = useRef<HTMLDivElement>(null);
   const [hideScrollIndicator, setHideScrollIndicator] = useState(false);
@@ -25,18 +30,18 @@ const Hero: React.FC = () => {
         <picture>
           <source
             media="(max-width: 600px)"
-            srcSet="/images/background-397x256.webp"
+            srcSet={heroBg397}
           />
           <source
             media="(max-width: 1024px)"
-            srcSet="/images/background-794x512.webp"
+            srcSet={heroBg794}
           />
           <source
             media="(max-width: 1400px)"
-            srcSet="/images/background-1191x767.webp"
+            srcSet={heroBg1191}
           />
           <img
-            src="/images/background-1460x941.webp"
+            src={heroBg1460}
             alt=""
             style={{ width: '100%', height: '100%', objectFit: 'cover', position: 'absolute', zIndex: -1 }}
             aria-hidden="true"
