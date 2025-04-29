@@ -37,12 +37,21 @@ fs.readdir(inputFolder, (err, files) => {
             return;
         }
 
+        // Export original size as webp
+        const { name } = path.parse(file);
+        const originalWebpPath = path.join(outputFolder, `${name}.webp`);
+        sharp(inputImagePath)
+            .webp()
+            .toFile(originalWebpPath)
+            .then(() => console.log(`✅ Created ${path.basename(originalWebpPath)}`))
+            .catch(err => console.error(`❌ Error processing ${file}:`, err));
+
         sizes.forEach(size => {
-            const { name, ext } = path.parse(file);
-            const outputImagePath = path.join(outputFolder, `${name}-${size.width}x${size.height}${ext}`);
+            const outputImagePath = path.join(outputFolder, `${name}-${size.width}x${size.height}.webp`);
 
             sharp(inputImagePath)
                 .resize(size.width, size.height)
+                .webp()
                 .toFile(outputImagePath)
                 .then(() => console.log(`✅ Created ${path.basename(outputImagePath)}`))
                 .catch(err => console.error(`❌ Error processing ${file}:`, err));

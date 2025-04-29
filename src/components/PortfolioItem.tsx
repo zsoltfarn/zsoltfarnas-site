@@ -18,7 +18,7 @@ interface PortfolioItemProps {
 function generateSrcSet(imageName: string) {
   const sizes = ['397x256', '794x512', '1191x767', '1460x941'];
 
-  const extensionMatch = imageName.match(/\.(jpeg|jpg|png)$/i);
+  const extensionMatch = imageName.match(/\.(webp|jpeg|jpg|png)$/i);
 
   if (!extensionMatch) {
     console.error('Invalid image extension!', imageName);

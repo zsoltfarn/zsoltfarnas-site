@@ -9,7 +9,7 @@ const portfolioData = [
     id: 1,
     title: 'Luxury Real Estate Platform',
     category: 'Web Development',
-    image: 'real-estate.jpeg',
+    image: 'real-estate.webp',
     tags: ['React', 'Node.js', 'MongoDB'],
     description: 'A premium real estate platform with advanced property filtering, virtual tours.'
   },
@@ -17,7 +17,7 @@ const portfolioData = [
     id: 2,
     title: 'Fashion E-commerce Store',
     category: 'E-commerce',
-    image: 'fashion.jpeg',
+    image: 'fashion.webp',
     tags: ['WooCommerce', 'WordPress', 'Custom Theme'],
     description: 'A high-converting fashion store with custom product filters.'
   },
@@ -25,7 +25,7 @@ const portfolioData = [
     id: 3,
     title: 'Restaurant Booking System',
     category: 'WordPress',
-    image: 'restaurant.jpeg',
+    image: 'restaurant.webp',
     tags: ['WordPress', 'Custom Plugin', 'API Integration'],
     description: 'An automated reservation system with table management and SMS notifications.'
   },
@@ -33,7 +33,7 @@ const portfolioData = [
     id: 4,
     title: 'Healthcare Provider Portal',
     category: 'Web Development',
-    image: 'healthcare.jpeg',
+    image: 'healthcare.webp',
     tags: ['React', 'TypeScript', 'Firebase'],
     description: 'A secure patient management system with appointment scheduling.'
   },
@@ -41,7 +41,7 @@ const portfolioData = [
     id: 5,
     title: 'Travel Blog & Booking',
     category: 'WordPress',
-    image: 'travel.jpeg',
+    image: 'travel.webp',
     tags: ['WordPress', 'Custom Theme', 'Elementor'],
     description: 'A visually stunning travel blog with integrated booking capabilities and user reviews.'
   },
@@ -49,7 +49,7 @@ const portfolioData = [
     id: 6,
     title: 'Corporate Dashboard',
     category: 'Web Development',
-    image: 'corporate.jpeg',
+    image: 'corporate.webp',
     tags: ['Vue.js', 'Express', 'PostgreSQL'],
     description: 'A comprehensive analytics dashboard for business intelligence.'
   }

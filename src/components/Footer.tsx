@@ -10,7 +10,7 @@ const Footer: React.FC = () => {
       <div className="footer-container">
         <div className="footer-grid">
           <div className="footer-about">
-            <a href="/">
+            <a href="/" aria-label="ZSF Logo">
               <img src="/zsf-logo-white.svg" alt="ZSF Logo" className="footer-logo" width={70} height={25} />
             </a>
             <p className="footer-text">
@@ -18,7 +18,7 @@ const Footer: React.FC = () => {
               functional, and user-friendly websites for businesses of all sizes.
             </p>
             <div className="footer-social">
-              <a href="https://linkedin.com/" className="footer-social-link">
+              <a href="https://linkedin.com/" aria-label="ZSF Linkedin Profile" className="footer-social-link">
                 <Linkedin size={20} />
               </a>
             </div>
