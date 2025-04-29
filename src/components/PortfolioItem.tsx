@@ -52,7 +52,7 @@ const PortfolioItem: React.FC<PortfolioItemProps> = ({
           className="portfolio-item-image"
           loading="lazy"
           srcSet={generateSrcSet(item.image)}
-          sizes="(max-width: 400px) 397px, (max-width: 800px) 794px, (max-width: 1200px) 1191px, 1460px"
+          sizes="(max-width: 600px) 397px, (max-width: 1024px) 794px, (max-width: 1400px) 1191px, 1460px"
         />
         <div className="portfolio-item-gradient" />
       </div>
