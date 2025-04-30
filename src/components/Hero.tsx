@@ -6,6 +6,7 @@ import heroBg397 from '../img/background-397x256.webp';
 import heroBg794 from '../img/background-794x512.webp';
 import heroBg1191 from '../img/background-1191x767.webp';
 import heroBg1460 from '../img/background-1460x941.webp';
+import { Link } from './ui/Link';
 
 const Hero: React.FC = () => {
   const headerRef = useRef<HTMLDivElement>(null);
@@ -65,9 +66,9 @@ const Hero: React.FC = () => {
               View Our Work
               <ArrowRight size={18} style={{ marginLeft: '0.5rem' }} />
             </button>
-            <button className="hero-btn-secondary">
+            <Link href="#contact" className="hero-btn-secondary">
               Get in Touch
-            </button>
+            </Link>
           </div>
         </div>
       </div>
