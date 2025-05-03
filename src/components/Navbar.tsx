@@ -2,11 +2,13 @@ import React, { useState, useEffect } from 'react';
 import { Menu, X, ChevronRight } from 'lucide-react';
 import { Link } from './ui/Link';
 import './Navbar.css';
+import LanguageSwitcher from './LanguageSwitcher';
+import { useTranslation, Trans } from 'react-i18next';
 
 const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-
+  useTranslation();
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
@@ -30,22 +32,24 @@ const Navbar: React.FC = () => {
             />
           </Link>
         </div>
-
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center space-x-10">
-          {['Home', 'Services', 'Portfolio', 'About', 'Contact'].map((item) => (
+          {['navbar.home', 'navbar.services', 'navbar.portfolio', 'navbar.about', 'navbar.contact'].map((key, idx) => (
             <Link 
-              key={item}
-              href={`#${item.toLowerCase()}`}
+              key={key}
+              href={`#${['home', 'services', 'portfolio', 'about', 'contact'][idx]}`}
               className={`navbar-link font-medium transition-colors duration-200`}
             >
-              {item}
+              <Trans i18nKey={key}>
+                {['Home', 'Services', 'Portfolio', 'About', 'Contact'][idx]}
+              </Trans>
             </Link>
           ))}
           <button className="get-started-btn">
-            Get Started
+            <Trans i18nKey="navbar.getstarted">Get Started</Trans>
             <ChevronRight size={18} className="get-started-chevron" />
           </button>
+          <LanguageSwitcher />
         </div>
 
         {/* Mobile Menu Toggle */}
@@ -76,7 +80,7 @@ const Navbar: React.FC = () => {
               </Link>
             ))}
             <button className="get-started-btn">
-              Get Started
+              <Trans i18nKey="navbar.getstarted">Get Started</Trans>
               <ChevronRight size={18} className="get-started-chevron" />
             </button>
           </div>

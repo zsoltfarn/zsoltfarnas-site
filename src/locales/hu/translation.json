@@ -1,0 +1,27 @@
+{
+    "hero": {
+        "title": "Digitális élményeket alkotunk amelyek átalakítják a vállalkozásokat",
+        "desc": "Lenyűgöző weboldalakat tervezünk, nagy teljesítményű WordPress megoldásokat építünk, és professzionális SEO szolgáltatásokat nyújtunk — mindezt a növekedés, az ügyfél-elkötelezettség és a márka erősítése érdekében.",
+        "viewWork": "Munkáink megtekintése",
+        "getInTouch": "Kapcsolat"
+    },
+
+    "navbar": {
+        "home": "Kezdőlap",
+        "about": "Rólunk",
+        "portfolio": "Portfolió",
+        "services": "Szolgáltatások",
+        "work": "Munkáink",
+        "contact": "Kapcsolat",
+        "getstarted": "Kezdés"
+    },
+
+    "footer": {
+        "footer-text": "Professzionális webfejlesztési szolgáltatások, amelyek célja esztétikus, funkcionális és felhasználóbarát weboldalak létrehozása minden méretű vállalkozás számára.",
+        "copyright": "Minden jog fenntartva.",
+        "quick-links": "Gyors hivatkozások",
+        "pricing": "Árak",
+        "contact-info": "Kapcsolati Információk"
+
+    }
+}
