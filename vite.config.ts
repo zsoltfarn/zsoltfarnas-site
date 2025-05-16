@@ -7,6 +7,5 @@ export default defineConfig({
   optimizeDeps: {
     exclude: ['lucide-react'],
   },
-  base: '/log-calculator/', // <- This must match the subfolder in the deployed URL
 });
 
