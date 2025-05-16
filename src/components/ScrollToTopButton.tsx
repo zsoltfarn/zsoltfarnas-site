@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { ChevronUp } from 'lucide-react';
 
 const ScrollToTopButton: React.FC = () => {
   const [visible, setVisible] = useState(false);
@@ -21,7 +22,7 @@ const ScrollToTopButton: React.FC = () => {
       onClick={scrollToTop}
       aria-label="Scroll to top"
     >
-      ↑
+      <ChevronUp size={24} />
     </button>
   );
 };

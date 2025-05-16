@@ -4,31 +4,44 @@ import { Link } from './ui/Link';
 import './Navbar.css';
 import LanguageSwitcher from './LanguageSwitcher';
 import { useTranslation, Trans } from 'react-i18next';
+import { useLocation } from 'react-router-dom';
+
+// Define the custom hook
+const useNavbarStyle = () => {
+  const location = useLocation();
+  const [isScrolled, setIsScrolled] = useState(false);
+  // Ensure the path comparison is accurate, especially with trailing slashes
+  const isLogCalculator = location.pathname === '/log-calculator' || location.pathname === '/log-calculator/';
+
+  useEffect(() => {
+    const onScroll = () => setIsScrolled(window.scrollY > 20);
+    window.addEventListener('scroll', onScroll);
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
+  return { isScrolled, isLogCalculator };
+};
 
 const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
+  // Use the custom hook
+  const { isScrolled, isLogCalculator } = useNavbarStyle();
   useTranslation();
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  // The original useEffect for scrolling and isDarkTextPage logic is now in the hook
 
   return (
-    <nav 
+    <nav
       className={`navbar ${isScrolled ? 'navbar-scrolled' : 'navbar-top'}`}
+      style={{ color: isLogCalculator && !isScrolled ? '#000' : '#fff' }}
     >
       <div className="container mx-auto px-4 md:px-14 flex justify-between items-center">
         <div className="flex items-center">
-          <Link href="#home" className="flex items-center">
+          <Link href="/" className="flex items-center">
             <img
-              src="/zsf-logo-white.svg"
+              src={isLogCalculator ? (isScrolled ? "/zsf-logo-white.svg" : "/zsf-logo-blue.svg") : "/zsf-logo-white.svg"}
               alt="ZSF Studio Logo"
-              className={`logo ${isScrolled ? 'logo-scrolled' : ''}`}
+              className={`logo`}
             />
           </Link>
         </div>
@@ -37,7 +50,7 @@ const Navbar: React.FC = () => {
           {['navbar.home', 'navbar.services', 'navbar.portfolio', 'navbar.about', 'navbar.contact'].map((key, idx) => (
             <Link 
               key={key}
-              href={`#${['home', 'services', 'portfolio', 'about', 'contact'][idx]}`}
+              href={idx === 0 ? '/' : `#${['home', 'services', 'portfolio', 'about', 'contact'][idx]}`}
               className={`navbar-link font-medium transition-colors duration-200`}
             >
               <Trans i18nKey={key}>
@@ -53,14 +66,14 @@ const Navbar: React.FC = () => {
         </div>
 
         {/* Mobile Menu Toggle */}
-        <button 
+        <button
           className="md:hidden"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
           {isMenuOpen ? (
-            <X size={24} className={isScrolled ? 'text-gray-800' : 'text-white'} />
+            <X size={24} className={(isScrolled || isLogCalculator) ? 'text-gray-800' : 'text-white'} />
           ) : (
-            <Menu size={24} className={isScrolled ? 'text-gray-800' : 'text-white'} />
+              <Menu size={24} className={(isScrolled || isLogCalculator) ? 'text-gray-800' : 'text-white'} />
           )}
         </button>
       </div>

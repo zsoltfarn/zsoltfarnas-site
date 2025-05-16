@@ -15,6 +15,7 @@ interface PortfolioItemProps {
     imageSet: ImageSet[];
     tags: string[];
     description: string;
+    link?: string;  // Added this line
   };
   onMouseEnter: () => void;
   onMouseLeave: () => void;
@@ -63,7 +64,7 @@ const PortfolioItem: React.FC<PortfolioItemProps> = ({
             </span>
           ))}
         </div>
-        <a href="#" className="portfolio-item-link">
+        <a href={item.link || "#"} className="portfolio-item-link">
           View Project{' '}
           <ExternalLink size={16} className="portfolio-item-link-icon" />
         </a>

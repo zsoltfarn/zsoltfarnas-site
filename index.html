@@ -52,6 +52,80 @@
             'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
       })(window, document, 'script', 'dataLayer', 'GTM-TQQ3R6G2');</script>
     <!-- End Google Tag Manager -->
+     <script>
+  if (window.location.pathname.includes('log-calculator')) {
+    fetch('/src/meta/log-calculator-meta.json')
+      .then(res => res.json())
+      .then(meta => {
+        document.title = meta.title;
+        [
+          { name: "description", content: meta.description },
+          { name: "keywords", content: meta.keywords },
+          { property: "og:title", content: meta.ogTitle },
+          { property: "og:description", content: meta.ogDescription },
+          { property: "og:type", content: meta.ogType },
+          { property: "og:url", content: meta.ogUrl },
+          { name: "twitter:card", content: meta.twitterCard },
+          { name: "twitter:title", content: meta.twitterTitle },
+          { name: "twitter:description", content: meta.twitterDescription },
+          { rel: "canonical", href: meta.canonical }
+        ].forEach(tag => {
+          let el;
+          if (tag.name) {
+            el = document.querySelector(`meta[name="${tag.name}"]`) || document.createElement('meta');
+            el.setAttribute('name', tag.name);
+            el.setAttribute('content', tag.content);
+          } else if (tag.property) {
+            el = document.querySelector(`meta[property="${tag.property}"]`) || document.createElement('meta');
+            el.setAttribute('property', tag.property);
+            el.setAttribute('content', tag.content);
+          } else if (tag.rel) {
+            el = document.querySelector(`link[rel="${tag.rel}"]`) || document.createElement('link');
+            el.setAttribute('rel', tag.rel);
+            el.setAttribute('href', tag.href);
+          }
+          if (!el.parentNode) document.head.appendChild(el);
+        });
+      });
+  }
+</script>
+           <script>
+            if (window.location.pathname.includes('log-calculator')) {
+              fetch('/src/meta/log-calculator-meta.json')
+                .then(res => res.json())
+                .then(meta => {
+                  document.title = meta.title;
+                  [
+                    { name: "description", content: meta.description },
+                    { name: "keywords", content: meta.keywords },
+                    { property: "og:title", content: meta.ogTitle },
+                    { property: "og:description", content: meta.ogDescription },
+                    { property: "og:type", content: meta.ogType },
+                    { property: "og:url", content: meta.ogUrl },
+                    { name: "twitter:card", content: meta.twitterCard },
+                    { name: "twitter:title", content: meta.twitterTitle },
+                    { name: "twitter:description", content: meta.twitterDescription },
+                    { rel: "canonical", href: meta.canonical }
+                  ].forEach(tag => {
+                    let el;
+                    if (tag.name) {
+                      el = document.querySelector(`meta[name="${tag.name}"]`) || document.createElement('meta');
+                      el.setAttribute('name', tag.name);
+                      el.setAttribute('content', tag.content);
+                    } else if (tag.property) {
+                      el = document.querySelector(`meta[property="${tag.property}"]`) || document.createElement('meta');
+                      el.setAttribute('property', tag.property);
+                      el.setAttribute('content', tag.content);
+                    } else if (tag.rel) {
+                      el = document.querySelector(`link[rel="${tag.rel}"]`) || document.createElement('link');
+                      el.setAttribute('rel', tag.rel);
+                      el.setAttribute('href', tag.href);
+                    }
+                    if (!el.parentNode) document.head.appendChild(el);
+                  });
+                });
+            }
+          </script>
   </head>
   <body>
     <div id="root"></div>

@@ -43,7 +43,7 @@ import corporateOriginal from '../img/corporate.webp';
 const portfolioData = [
   {
     id: 1,
-    title: 'Luxury Real Estate Platform',
+    title: 'Log Volume Calculator',
     category: 'Web Development',
     image: realEstateOriginal,
     imageSet: [
@@ -52,8 +52,9 @@ const portfolioData = [
       { src: realEstate1191, width: 1191 },
       { src: realEstate1460, width: 1460 }
     ],
-    tags: ['React', 'Node.js', 'MongoDB'],
-    description: 'A premium real estate platform with advanced property filtering, virtual tours.'
+    tags: ['React', 'Node.js'],
+    description: 'Calculate the cubic volume of wood logs quickly and accurately using our Log Volume Calculator.',
+    link: '/log-calculator/'
   },
   {
     id: 2,

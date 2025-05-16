@@ -10,16 +10,22 @@
   --color-text-light: #fff;
   --color-text-muted: #d1d5db;
   --color-background: #f9fafb;
+  --body-font: 'Poppins', sans-serif;
 }
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 * {
-  transition: all 0.3s ease;
+  transition: all 0.2s linear;
 }
+
 html {
   scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--body-font);
 }
 
 .portfolio-item-image {

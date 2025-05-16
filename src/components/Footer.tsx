@@ -1,5 +1,6 @@
 import React from 'react';
-import { Mail, Linkedin } from 'lucide-react';
+import { Mail, Linkedin, Dribbble } from 'lucide-react';
+import { SiTiktok } from "react-icons/si";
 import './Footer.css';
 import { useTranslation, Trans } from 'react-i18next';
 
@@ -20,8 +21,14 @@ const Footer: React.FC = () => {
                 functional, and user-friendly websites for businesses of all sizes.</Trans>
             </p>
             <div className="footer-social">
-              <a href="https://linkedin.com/" aria-label="ZSF Linkedin Profile" className="footer-social-link">
+              <a href="https://www.linkedin.com/in/zsolt-farnas/" aria-label="ZSF Linkedin Profile" className="footer-social-link">
                 <Linkedin size={20} />
+              </a>
+              <a href="https://dribbble.com/zsoltfarnas" aria-label="Dribbble Profile" className="footer-social-link" target="_blank" rel="noopener noreferrer">
+                <Dribbble size={20} />
+              </a>
+              <a href="https://www.tiktok.com/@zsfstudio" aria-label="TikTok Profile" className="footer-social-link" target="_blank" rel="noopener noreferrer">
+                <SiTiktok size={20} />
               </a>
             </div>
           </div>
