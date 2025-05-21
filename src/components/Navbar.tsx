@@ -3,7 +3,7 @@ import { Menu, X, ChevronRight } from 'lucide-react';
 import { Link } from './ui/Link';
 import './Navbar.css';
 import LanguageSwitcher from './LanguageSwitcher';
-import { useTranslation, Trans } from 'react-i18next';
+import { useTranslation } from 'react-i18next';
 import { useLocation } from 'react-router-dom';
 
 // Define the custom hook
@@ -26,7 +26,7 @@ const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   // Use the custom hook
   const { isScrolled, isLogCalculator } = useNavbarStyle();
-  useTranslation();
+  const { t } = useTranslation();
 
   // The original useEffect for scrolling and isDarkTextPage logic is now in the hook
 
@@ -53,13 +53,11 @@ const Navbar: React.FC = () => {
               href={idx === 0 ? '/' : `#${['home', 'services', 'portfolio', 'about', 'contact'][idx]}`}
               className={`navbar-link font-medium transition-colors duration-200`}
             >
-              <Trans i18nKey={key}>
-                {['Home', 'Services', 'Portfolio', 'About', 'Contact'][idx]}
-              </Trans>
+              {t(key)}
             </Link>
           ))}
           <button className="get-started-btn">
-            <Trans i18nKey="navbar.getstarted">Get Started</Trans>
+            {t("navbar.getstarted")}
             <ChevronRight size={18} className="get-started-chevron" />
           </button>
           <LanguageSwitcher />
@@ -89,13 +87,11 @@ const Navbar: React.FC = () => {
                 className="block font-medium text-gray-700 hover:text-teal-600"
                 onClick={() => setIsMenuOpen(false)}
               >
-                <Trans i18nKey={key}>
-                  {['Home', 'Services', 'Portfolio', 'About', 'Contact'][idx]}
-                </Trans>
+                {t(key)}
               </Link>
             ))}
             <button className="get-started-btn">
-              <Trans i18nKey="navbar.getstarted">Get Started</Trans>
+              {t("navbar.getstarted")}
               <ChevronRight size={18} className="get-started-chevron" />
             </button>
             <LanguageSwitcher />
