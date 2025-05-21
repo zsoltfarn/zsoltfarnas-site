@@ -6,19 +6,24 @@
 }
 
 .portfolio-item-image-wrapper {
-  position: relative;
-  height: 16rem;
+  /* Increase the size of the image container */
+  width: 100%;
+  height: 250px; /* Increase this value as needed */
   overflow: hidden;
+  border-radius: 12px;
+  position: relative;
 }
 
 .portfolio-item-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
+  transform: scale(1.1);
 }
 
 .portfolio-item:hover .portfolio-item-image {
-  transform: scale(1.1);
+  transform: scale(1.3);
 }
 
 .portfolio-item-gradient {
@@ -44,9 +49,7 @@
   transform: translateY(1.5rem);
 }
 
-.portfolio-item:hover .portfolio-item-content {
-  transform: translateY(0);
-}
+
 
 .portfolio-item-category {
   display: inline-block;

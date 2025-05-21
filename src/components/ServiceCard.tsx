@@ -1,6 +1,7 @@
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
 import './ServiceCard.css';
+import { useTranslation } from 'react-i18next';
 
 interface ServiceCardProps {
   icon: React.ReactNode;
@@ -9,6 +10,7 @@ interface ServiceCardProps {
 }
 
 const ServiceCard: React.FC<ServiceCardProps> = ({ icon, title, description }) => {
+  const { t } = useTranslation();
   return (
     <div className="service-card">
       <div className="service-card-bg" />
@@ -20,7 +22,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ icon, title, description }) =
       <p className="service-card-desc">{description}</p>
       
       <button className="service-card-btn">
-        Learn More
+        {t('services.learn-more')}
         <ArrowRight size={16} className="service-card-arrow" />
       </button>
     </div>

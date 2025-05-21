@@ -71,9 +71,9 @@ const Navbar: React.FC = () => {
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
           {isMenuOpen ? (
-            <X size={24} className={(isScrolled || isLogCalculator) ? 'text-gray-800' : 'text-white'} />
+            <X size={24} color="#fff" className="text-white" />
           ) : (
-              <Menu size={24} className={(isScrolled || isLogCalculator) ? 'text-gray-800' : 'text-white'} />
+            <Menu size={24} color="#fff" className="text-white" />
           )}
         </button>
       </div>
@@ -82,20 +82,23 @@ const Navbar: React.FC = () => {
       {isMenuOpen && (
         <div className="mobile md:hidden bg-white">
           <div className="px-4 py-4 space-y-5 shadow-lg">
-            {['Home', 'Services', 'Portfolio', 'About', 'Contact'].map((item) => (
+            {['navbar.home', 'navbar.services', 'navbar.portfolio', 'navbar.about', 'navbar.contact'].map((key, idx) => (
               <Link 
-                key={item}
-                href={item === 'About' ? '/about' : `#${item.toLowerCase()}`}
+                key={key}
+                href={idx === 3 ? '/about' : `#${['home', 'services', 'portfolio', 'about', 'contact'][idx]}`}
                 className="block font-medium text-gray-700 hover:text-teal-600"
                 onClick={() => setIsMenuOpen(false)}
               >
-                {item}
+                <Trans i18nKey={key}>
+                  {['Home', 'Services', 'Portfolio', 'About', 'Contact'][idx]}
+                </Trans>
               </Link>
             ))}
             <button className="get-started-btn">
               <Trans i18nKey="navbar.getstarted">Get Started</Trans>
               <ChevronRight size={18} className="get-started-chevron" />
             </button>
+            <LanguageSwitcher />
           </div>
         </div>
       )}

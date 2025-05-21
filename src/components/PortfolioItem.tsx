@@ -1,6 +1,7 @@
 import React from 'react';
 import { ExternalLink } from 'lucide-react';
 import './PortfolioItem.css';
+import { useTranslation } from 'react-i18next';
 
 interface ImageSet {
   src: string;
@@ -27,6 +28,7 @@ const PortfolioItem: React.FC<PortfolioItemProps> = ({
   onMouseEnter,
   onMouseLeave,
 }) => {
+  const { t } = useTranslation();
   // Generate srcSet string from imageSet
   const srcSet = item.imageSet
     .map((img) => `${img.src} ${img.width}w`)
@@ -65,7 +67,7 @@ const PortfolioItem: React.FC<PortfolioItemProps> = ({
           ))}
         </div>
         <a href={item.link || "#"} className="portfolio-item-link">
-          View Project{' '}
+          {t('portfolio.viewProject')}
           <ExternalLink size={16} className="portfolio-item-link-icon" />
         </a>
       </div>

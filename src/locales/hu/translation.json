@@ -23,5 +23,143 @@
         "pricing": "Árak",
         "contact-info": "Kapcsolati Információk"
 
-    }
+    },
+
+    "contact": {
+        "title": "Vedd fel velünk a kapcsolatot",
+        "description": "Készen állsz a projekt elkezdésére? Vedd fel velünk a kapcsolatot még ma egy ingyenes konzultációért és árajánlatért."
+    },
+
+    "contactForm": {
+        "name": "Név",
+        "email": "Email",
+        "phone": "Telefon",
+        "service": "Érdeklődési szolgáltatás",
+        "message": "Üzenet",
+        "placeholderName": "Neved",
+        "placeholderEmail": "email@cimed.hu",
+        "placeholderPhone": "(Opcionális)",
+        "placeholderMessage": "Mesélj a projektedről...",
+        "optionWebDev": "Webfejlesztés",
+        "optionWordPress": "WordPress fejlesztés",
+        "optionEcommerce": "E-kereskedelmi megoldás",
+        "optionUIUX": "UI/UX tervezés",
+        "optionMaintenance": "Weboldal karbantartás",
+        "send": "Küldés",
+        "sending": "Küldés...",
+        "successTitle": "Köszönjük!",
+        "successMsg1": "Üzeneted sikeresen elküldtük.",
+        "successMsg2": "Hamarosan felvesszük veled a kapcsolatot.",
+        "error": "Hiba történt az üzenet küldésekor. Kérlek, próbáld újra."
+    },
+
+    "services": {
+        "services-title": "Szolgáltatásaink",
+        "services-description": "Átfogó webfejlesztési és WordPress szolgáltatásokat kínálunk, hogy segítsük vállalkozását online sikereket elérni.",
+        "description": "Professzionális webfejlesztési szolgáltatások, amelyek célja esztétikus, funkcionális és felhasználóbarát weboldalak létrehozása minden méretű vállalkozás számára.",
+        "webdev-title": "Webfejlesztés",
+        "webdev-desc": "Egyedi weboldalak modern technológiákkal, a teljesítményre, skálázhatóságra és felhasználói élményre fókuszálva.",
+        "wordpress-title": "WordPress fejlesztés",
+        "wordpress-desc": "Professzionális WordPress weboldalak egyedi témákkal, bővítményekkel, sebesség- és biztonsági optimalizálással.",
+        "responsive-title": "Reszponzív tervezés",
+        "responsive-desc": "Mobilbarát weboldalak, amelyek minden eszközön és képernyőméreten zökkenőmentes élményt nyújtanak.",
+        "ecommerce-title": "E-kereskedelmi megoldások",
+        "ecommerce-desc": "Online áruházak biztonságos fizetéssel, készletkezeléssel és optimalizált vásárlási folyamattal.",
+        "uiux-title": "UI/UX tervezés",
+        "uiux-desc": "Felhasználóközpontú tervezési folyamatok, amelyek intuitív, vonzó és vizuálisan megnyerő felületeket hoznak létre.",
+        "maintenance-title": "Weboldal karbantartás",
+        "maintenance-desc": "Folyamatos támogatás, frissítések és optimalizálás, hogy weboldala biztonságos és csúcsteljesítményű maradjon.",
+        "learn-more": "Tudj meg többet"
+    },
+    "portfolio": {
+        "title": "Portfóliónk",
+        "description": "Tekintse meg legutóbbi projektjeinket, és nézze meg, hogyan segítettünk vállalkozásoknak elérni digitális céljaikat.",
+        "categories": {
+            "all": "Összes",
+            "webdev": "Webfejlesztés",
+            "wordpress": "WordPress",
+            "ecommerce": "E-kereskedelem"
+        },
+        "viewAll": "Összes projekt megtekintése",
+        "items": {
+            "logCalculator": {
+                "title": "Rönk Térfogat Kalkulátor",
+                "category": "Webfejlesztés",
+                "description": "Számolja ki a fa rönkök köbméterét gyorsan és pontosan.",
+                "tags": [
+                    "React",
+                    "Node.js"
+                ]
+            },
+            "fashionStore": {
+                "title": "Divat E-kereskedelmi Áruház",
+                "category": "E-kereskedelem",
+                "description": "Magas konverziójú divatáruház egyedi termékszűrőkkel.",
+                "tags": [
+                    "WooCommerce",
+                    "WordPress",
+                    "Egyedi téma"
+                ]
+            },
+            "restaurantBooking": {
+                "title": "Éttermi Foglalási Rendszer",
+                "category": "WordPress",
+                "description": "Automatizált asztalfoglalási rendszer asztalkezeléssel és SMS értesítésekkel.",
+                "tags": [
+                    "WordPress",
+                    "Egyedi bővítmény",
+                    "API integráció"
+                ]
+            }
+        },
+        "viewProject": "Projekt megtekintése"
+
+},
+"pricing": {
+    "section-title": "Átlátható árak",
+    "section-description": "Válassza ki az Ön vállalkozásához leginkább illő csomagot. Minden csomag prémium támogatást és elégedettségi garanciát tartalmaz.",
+    "plans": {
+        "basic": {
+            "name": "Alap Weboldal",
+            "features": [
+                "Egyedi tervezés",
+                "Mobilbarát kialakítás",
+                "5 oldal",
+                "Kapcsolati űrlap",
+                "Alap SEO beállítás",
+                "2 módosítási kör"
+            ]
+        },
+        "pro": {
+            "name": "Professzionális WordPress",
+            "features": [
+                "Egyedi WordPress téma",
+                "E-kereskedelemre kész",
+                "10 oldal",
+                "Fejlett kapcsolati űrlapok",
+                "SEO optimalizálás",
+                "Teljesítmény optimalizálás",
+                "3 módosítási kör",
+                "1 hónap támogatás"
+            ]
+        },
+        "enterprise": {
+            "name": "Vállalati Megoldás",
+            "features": [
+                "Egyedi webalkalmazás",
+                "Fejlett funkcionalitás",
+                "Korlátlan oldal",
+                "Egyedi funkciók és bővítmények",
+                "Fejlett biztonság",
+                "Prémium SEO csomag",
+                "Korlátlan módosítás",
+                "6 hónap támogatás"
+            ]
+        }
+    },
+    "most-popular": "Legnépszerűbb",
+    "price-desc": "egyszeri",
+    "get-started": "Kezdés"
+}
+
 }

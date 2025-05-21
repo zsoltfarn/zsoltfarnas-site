@@ -1,13 +1,15 @@
 import React, { useState } from "react";
 import './Contact.css';
 import { X } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 const SimpleContactForm: React.FC = () => {
+  const { t } = useTranslation();
   const initialFormState = {
     name: "",
     email: "",
     phone: "",
-    service: "Web Development",
+    service: t("contactForm.optionWebDev"),
     message: ""
   };
   const [formState, setFormState] = useState(initialFormState);
@@ -68,7 +70,7 @@ const SimpleContactForm: React.FC = () => {
         <div className="contact-form-row">
           <div className="contact-form-group">
             <label htmlFor="name" className="contact-label">
-              Name
+              {t("contactForm.name")}
             </label>
             <input
               type="text"
@@ -77,14 +79,14 @@ const SimpleContactForm: React.FC = () => {
               value={formState.name}
               onChange={handleChange}
               className="contact-input"
-              placeholder="Your name"
+              placeholder={t("contactForm.placeholderName")}
               required
               disabled={isSubmitting}
             />
           </div>
           <div className="contact-form-group">
             <label htmlFor="email" className="contact-label">
-              Email
+              {t("contactForm.email")}
             </label>
             <input
               type="email"
@@ -93,7 +95,7 @@ const SimpleContactForm: React.FC = () => {
               value={formState.email}
               onChange={handleChange}
               className="contact-input"
-              placeholder="your.email@example.com"
+              placeholder={t("contactForm.placeholderEmail")}
               required
               disabled={isSubmitting}
             />
@@ -102,7 +104,7 @@ const SimpleContactForm: React.FC = () => {
         <div className="contact-form-row">
           <div className="contact-form-group">
             <label htmlFor="phone" className="contact-label">
-              Phone
+              {t("contactForm.phone")}
             </label>
             <input
               type="tel"
@@ -111,13 +113,13 @@ const SimpleContactForm: React.FC = () => {
               value={formState.phone}
               onChange={handleChange}
               className="contact-input"
-              placeholder="(Optional)"
+              placeholder={t("contactForm.placeholderPhone")}
               disabled={isSubmitting}
             />
           </div>
           <div className="contact-form-group">
             <label htmlFor="service" className="contact-label">
-              Service Interested In
+              {t("contactForm.service")}
             </label>
             <select
               id="service"
@@ -127,17 +129,17 @@ const SimpleContactForm: React.FC = () => {
               className="contact-input"
               disabled={isSubmitting}
             >
-              <option>Web Development</option>
-              <option>WordPress Development</option>
-              <option>E-commerce Solution</option>
-              <option>UI/UX Design</option>
-              <option>Website Maintenance</option>
+              <option>{t("contactForm.optionWebDev")}</option>
+              <option>{t("contactForm.optionWordPress")}</option>
+              <option>{t("contactForm.optionEcommerce")}</option>
+              <option>{t("contactForm.optionUIUX")}</option>
+              <option>{t("contactForm.optionMaintenance")}</option>
             </select>
           </div>
         </div>
         <div className="contact-form-group">
           <label htmlFor="message" className="contact-label">
-            Message
+            {t("contactForm.message")}
           </label>
           <textarea
             id="message"
@@ -146,16 +148,16 @@ const SimpleContactForm: React.FC = () => {
             onChange={handleChange}
             rows={4}
             className="contact-input"
-            placeholder="Tell us about your project..."
+            placeholder={t("contactForm.placeholderMessage")}
             required
             disabled={isSubmitting}
           ></textarea>
         </div>
         {submitError && (
-          <p className="contact-error-message">{submitError}</p>
+          <p className="contact-error-message">{t("contactForm.error")}</p>
         )}
         <button type="submit" className="contact-submit-btn" disabled={isSubmitting}>
-          {isSubmitting ? 'Sending...' : 'Send'}
+          {isSubmitting ? t("contactForm.sending") : t("contactForm.send")}
         </button>
       </form>
       {showSuccessPopup && (
@@ -164,9 +166,9 @@ const SimpleContactForm: React.FC = () => {
             <button className="popup-close-btn" onClick={() => setShowSuccessPopup(false)}>
               <X size={20} />
             </button>
-            <h2>Thank You!</h2>
-            <p>Your message has been sent successfully.</p>
-            <p>We'll get back to you soon.</p>
+            <h2>{t("contactForm.successTitle")}</h2>
+            <p>{t("contactForm.successMsg1")}</p>
+            <p>{t("contactForm.successMsg2")}</p>
           </div>
         </div>
       )}

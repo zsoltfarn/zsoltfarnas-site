@@ -4,5 +4,137 @@
         "desc": "We design stunning websites, build high-performance WordPress solutions, and deliver expert SEO optimization services — all aimed at driving growth, engaging your audience, and elevating your brand in the competitive digital world.",
         "viewWork": "View Our Work",
         "getInTouch": "Get in Touch"
-    }
+    },
+    "contact": {
+        "title": "Get In Touch",
+        "description": "Ready to start your project? Contact us today for a free consultation and quote."
+    },
+   
+    "contactForm": {
+        "name": "Name",
+        "email": "Email",
+        "phone": "Phone",
+        "service": "Service Interested In",
+        "message": "Message",
+        "placeholderName": "Your name",
+        "placeholderEmail": "your.email@example.com",
+        "placeholderPhone": "(Optional)",
+        "placeholderMessage": "Tell us about your project...",
+        "optionWebDev": "Web Development",
+        "optionWordPress": "WordPress Development",
+        "optionEcommerce": "E-commerce Solution",
+        "optionUIUX": "UI/UX Design",
+        "optionMaintenance": "Website Maintenance",
+        "send": "Send",
+        "sending": "Sending...",
+        "successTitle": "Thank You!",
+        "successMsg1": "Your message has been sent successfully.",
+        "successMsg2": "We'll get back to you soon.",
+        "error": "There was an error sending your message. Please try again."
+    },
+    
+  "services": {
+    "webdev-title": "Web Development",
+    "webdev-desc": "Custom websites built with modern technologies focused on performance, scalability, and user experience.",
+    "wordpress-title": "WordPress Development",
+    "wordpress-desc": "Professional WordPress websites with custom themes, plugins, and optimizations for speed and security.",
+    "responsive-title": "Responsive Design",
+    "responsive-desc": "Mobile-first websites that provide seamless experiences across all devices and screen sizes.",
+    "ecommerce-title": "E-commerce Solutions",
+    "ecommerce-desc": "Online stores with secure payment processing, inventory management, and optimized checkout flows.",
+    "uiux-title": "UI/UX Design",
+    "uiux-desc": "User-centered design processes that create intuitive, engaging, and visually appealing interfaces.",
+    "maintenance-title": "Website Maintenance",
+    "maintenance-desc": "Ongoing support, updates, and optimizations to keep your website secure and performing at its best.",
+    "learn-more": "Learn More"
+  },
+"portfolio": {
+    "title": "Our Portfolio",
+    "description": "Explore our recent projects and see how we've helped businesses achieve their digital goals.",
+    "categories": {
+        "all": "All",
+        "webdev": "Web Development",
+        "wordpress": "WordPress",
+        "ecommerce": "E-commerce"
+    },
+    "viewAll": "View All Projects",
+    "items": {
+        "logCalculator": {
+            "title": "Log Volume Calculator",
+            "category": "Web Development",
+            "description": "Calculate the cubic volume of wood logs quickly and accurately.",
+            "tags": [
+                "React",
+                "Node.js"
+            ]
+        },
+        "fashionStore": {
+            "title": "Fashion E-commerce Store",
+            "category": "E-commerce",
+            "description": "A high-converting fashion store with custom product filters.",
+            "tags": [
+                "WooCommerce",
+                "WordPress",
+                "Custom Theme"
+            ]
+        },
+        "restaurantBooking": {
+            "title": "Restaurant Booking System",
+            "category": "WordPress",
+            "description": "An automated reservation system with table management and SMS notifications.",
+            "tags": [
+                "WordPress",
+                "Custom Plugin",
+                "API Integration"
+            ]
+        }
+    },
+    "viewProject": "View Project"
+},
+"pricing": {
+    "section-title": "Transparent Pricing",
+    "section-description": "Choose the perfect plan for your business needs. All plans include our premium support and satisfaction guarantee.",
+    "plans": {
+        "basic": {
+            "name": "Basic Website",
+            "features": [
+                "Custom Design",
+                "Mobile Responsive",
+                "5 Pages",
+                "Contact Form",
+                "Basic SEO Setup",
+                "2 Rounds of Revisions"
+            ]
+        },
+        "pro": {
+            "name": "Professional WordPress",
+            "features": [
+                "Custom WordPress Theme",
+                "E-commerce Ready",
+                "10 Pages",
+                "Advanced Contact Forms",
+                "SEO Optimization",
+                "Performance Optimization",
+                "3 Rounds of Revisions",
+                "1 Month Support"
+            ]
+        },
+        "enterprise": {
+            "name": "Enterprise Solution",
+            "features": [
+                "Custom Web Application",
+                "Advanced Functionality",
+                "Unlimited Pages",
+                "Custom Features & Plugins",
+                "Advanced Security",
+                "Premium SEO Package",
+                "Unlimited Revisions",
+                "6 Months Support"
+            ]
+        }
+    },
+    "most-popular": "Most Popular",
+    "price-desc": "one-time",
+    "get-started": "Get Started"
+}
 }
