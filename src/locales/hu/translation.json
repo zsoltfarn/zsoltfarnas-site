@@ -50,7 +50,12 @@
         "successTitle": "Köszönjük!",
         "successMsg1": "Üzeneted sikeresen elküldtük.",
         "successMsg2": "Hamarosan felvesszük veled a kapcsolatot.",
-        "error": "Hiba történt az üzenet küldésekor. Kérlek, próbáld újra."
+        "error": "Hiba történt az üzenet küldésekor. Kérlek, próbáld újra.",
+        "required": "Kötelező mező",
+        "invalidEmail": "Kérlek, adj meg egy érvényes email címet.",
+        "invalidPhone": "Kérlek, adj meg egy érvényes telefonszámot.",
+        "invalidService": "Kérlek, válassz egy szolgáltatást.",
+        "requiredFieldsPopup": "Kérjük, töltsd ki az összes kötelező mezőt a beküldés előtt."
     },
 
     "services": {

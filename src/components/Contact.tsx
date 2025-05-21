@@ -11,7 +11,7 @@ const Contact: React.FC = () => {
         <div className="text-center mb-16">
           <h2 className="contact-title">{t('contact.title')}</h2>
           <div className="contact-underline"></div>
-          <p className="description">
+          <p className="contact-description">
             {t('contact.description')}
           </p>
         </div>

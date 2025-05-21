@@ -27,8 +27,15 @@ const SimpleContactForm: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setIsSubmitting(true);
     setSubmitError(null);
+
+    // Client-side required field validation
+    if (!formState.name || !formState.email || !formState.message) {
+      setSubmitError(t("contactForm.requiredFieldsPopup"));
+      return;
+    }
+
+    setIsSubmitting(true);
 
     fetch("/", {
       method: "POST",
@@ -44,7 +51,7 @@ const SimpleContactForm: React.FC = () => {
       })
       .catch((error) => {
         console.error("Form submission error:", error);
-        setSubmitError("There was an error sending your message. Please try again.");
+        setSubmitError(t("contactForm.error"));
       })
       .finally(() => {
         setIsSubmitting(false);
@@ -70,7 +77,7 @@ const SimpleContactForm: React.FC = () => {
         <div className="contact-form-row">
           <div className="contact-form-group">
             <label htmlFor="name" className="contact-label">
-              {t("contactForm.name")}
+              {t("contactForm.name")} <span className="required-text">({t("contactForm.required")})</span>
             </label>
             <input
               type="text"
@@ -86,7 +93,7 @@ const SimpleContactForm: React.FC = () => {
           </div>
           <div className="contact-form-group">
             <label htmlFor="email" className="contact-label">
-              {t("contactForm.email")}
+              {t("contactForm.email")} <span className="required-text">({t("contactForm.required")})</span>
             </label>
             <input
               type="email"
@@ -139,7 +146,7 @@ const SimpleContactForm: React.FC = () => {
         </div>
         <div className="contact-form-group">
           <label htmlFor="message" className="contact-label">
-            {t("contactForm.message")}
+            {t("contactForm.message")} <span className="required-text">({t("contactForm.required")})</span>
           </label>
           <textarea
             id="message"
@@ -154,7 +161,14 @@ const SimpleContactForm: React.FC = () => {
           ></textarea>
         </div>
         {submitError && (
-          <p className="contact-error-message">{t("contactForm.error")}</p>
+          <div className="popup-overlay">
+            <div className="popup-content">
+              <button className="popup-close-btn" onClick={() => setSubmitError(null)}>
+                <X size={20} />
+              </button>
+              <p>{submitError}</p>
+            </div>
+          </div>
         )}
         <button type="submit" className="contact-submit-btn" disabled={isSubmitting}>
           {isSubmitting ? t("contactForm.sending") : t("contactForm.send")}

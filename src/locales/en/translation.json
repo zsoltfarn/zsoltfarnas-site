@@ -9,7 +9,7 @@
         "getstarted": "Get Started",
         "blog": "Blog"
     },
-    
+
     "hero": {
         "title": "Crafting Digital Experiences That Transform Businesses",
         "desc": "We design stunning websites, build high-performance WordPress solutions, and deliver expert SEO optimization services — all aimed at driving growth, engaging your audience, and elevating your brand in the competitive digital world.",
@@ -41,7 +41,12 @@
         "successTitle": "Thank You!",
         "successMsg1": "Your message has been sent successfully.",
         "successMsg2": "We'll get back to you soon.",
-        "error": "There was an error sending your message. Please try again."
+        "error": "There was an error sending your message. Please try again.",
+        "required": "Required field",
+        "invalidEmail": "Please enter a valid email address.",
+        "invalidPhone": "Please enter a valid phone number.",
+        "invalidService": "Please select a service.",
+        "requiredFieldsPopup": "Please fill in all required fields before submitting."
     },
     
   "services": {
