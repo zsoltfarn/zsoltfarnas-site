@@ -47,10 +47,10 @@ const Navbar: React.FC = () => {
         </div>
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center space-x-10">
-          {['navbar.home', 'navbar.services', 'navbar.portfolio', 'navbar.about', 'navbar.contact'].map((key, idx) => (
+          {['navbar.home', 'navbar.services', 'navbar.portfolio', 'navbar.contact'].map((key, idx) => (
             <Link 
               key={key}
-              href={idx === 0 ? '/' : `#${['home', 'services', 'portfolio', 'about', 'contact'][idx]}`}
+              href={idx === 0 ? '/' : `#${['home', 'services', 'portfolio', 'contact'][idx]}`}
               className={`navbar-link font-medium transition-colors duration-200`}
             >
               {t(key)}
@@ -80,10 +80,10 @@ const Navbar: React.FC = () => {
       {isMenuOpen && (
         <div className="mobile md:hidden bg-white">
           <div className="px-4 py-4 space-y-5 shadow-lg">
-            {['navbar.home', 'navbar.services', 'navbar.portfolio', 'navbar.about', 'navbar.contact'].map((key, idx) => (
+            {['navbar.home', 'navbar.services', 'navbar.portfolio', 'navbar.contact'].map((key, idx) => (
               <Link 
                 key={key}
-                href={idx === 3 ? '/about' : `#${['home', 'services', 'portfolio', 'about', 'contact'][idx]}`}
+                href={idx === 3 ? '/about' : `#${['home', 'services', 'portfolio', 'contact'][idx]}`}
                 className="block font-medium text-gray-700 hover:text-teal-600"
                 onClick={() => setIsMenuOpen(false)}
               >

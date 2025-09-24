@@ -16,7 +16,7 @@
   --button-color: hsl(var(--hue-color), 78%, 65%);
   /*===== Fonts =====*/
   --dark-grey: #555;
-  --body-font: Montserrat;
+  --body-font: 'Montserrat', sans-serif;
   --big-font-size: 4rem;
   --middle-font-size: 3.2rem;
   --h2-font-size: 1.5rem;
