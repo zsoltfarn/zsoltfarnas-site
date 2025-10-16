@@ -38,9 +38,9 @@ const portfolioData = [
     id: 5,
     title: t('portfolio.items.herrtrans.title'),
     category: t('portfolio.items.herrtrans.category'),
-    image: 'https://herrtrans.hu/favicon.ico',
+    image: 'https://herrtrans.hu/wp-content/uploads/2025/05/road2herrtrans.hu-.jpg',
     imageSet: [
-      { src: 'https://herrtrans.hu/favicon.ico', width: 256 }
+      { src: 'https://herrtrans.hu/wp-content/uploads/2025/05/road2herrtrans.hu-.jpg', width: 256 }
     ],
     tags: t('portfolio.items.herrtrans.tags', { returnObjects: true }) as string[],
     description: t('portfolio.items.herrtrans.description'),
@@ -112,15 +112,7 @@ return (
         ))}
       </div>
 
-      <div className="portfolio-viewall">
-        <a 
-          href="#" 
-          className="portfolio-viewall-link"
-        >
-          {t('portfolio.viewAll')}
-          <ExternalLink size={18} className="portfolio-viewall-link-icon" />
-        </a>
-      </div>
+      
     </div>
   </section>
 );

@@ -39,6 +39,22 @@
   opacity: 1;
 }
 
+/* Uniform dark overlay to ensure good contrast for white text */
+.portfolio-item-overlay {
+  position: absolute;
+  inset: 0;
+  /* Match hero overlay: use the same gradient colors */
+  background: linear-gradient(to right, var(--color-bg-gradient-from), var(--color-bg-gradient-to));
+  opacity: 0.55; /* darker base for better contrast */
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.portfolio-item:hover .portfolio-item-overlay,
+.portfolio-item.is-hovered .portfolio-item-overlay {
+  opacity: 0.7; /* much darker on hover */
+}
+
 .portfolio-item-content {
   position: absolute;
   bottom: 20px;

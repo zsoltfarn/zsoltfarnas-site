@@ -2,9 +2,30 @@ import React, { useState, useRef, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { ChevronDown } from 'lucide-react';
 
+// Use reliable flag icons instead of emoji to ensure consistent rendering across browsers/OS
 const languages = [
-  { code: 'en', label: 'EN', flag: '🇬🇧' },
-  { code: 'hu', label: 'HU', flag: '🇭🇺' },
+  {
+    code: 'en',
+    label: 'EN',
+    flag: (
+      <span
+        className="fi fi-gb"
+        style={{ display: 'inline-block', width: 18, height: 12 }}
+        aria-hidden="true"
+      />
+    )
+  },
+  {
+    code: 'hu',
+    label: 'HU',
+    flag: (
+      <span
+        className="fi fi-hu"
+        style={{ display: 'inline-block', width: 18, height: 12 }}
+        aria-hidden="true"
+      />
+    )
+  },
 ];
 
 const LanguageSwitcher: React.FC = () => {

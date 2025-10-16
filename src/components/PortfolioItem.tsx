@@ -52,9 +52,22 @@ const PortfolioItem: React.FC<PortfolioItemProps> = ({
           sizes={sizes}
           alt={item.title}
           className="portfolio-item-image"
-          style={item.fit === 'contain' ? { objectFit: 'contain', height: '100%', transform: 'none', backgroundColor: '#000' } : undefined}
+          style={
+            item.fit === 'contain'
+              ? {
+                  objectFit: 'contain',
+                  height: '100%',
+                  transform: 'none',
+                  // Match hero overlay background when letterboxing occurs
+                  background:
+                    'linear-gradient(to right, var(--color-bg-gradient-from), var(--color-bg-gradient-to))',
+                }
+              : undefined
+          }
           loading="lazy"
         />
+        {/* Dark overlay to improve text contrast */}
+        <div className="portfolio-item-overlay" />
         <div className="portfolio-item-gradient" />
       </div>
       <div className="portfolio-item-content">

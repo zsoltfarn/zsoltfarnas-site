@@ -117,7 +117,7 @@
                 ]
             },
             "marquardt": {
-                "title": "Marquardt.de",
+                "title": "Marquardt Container",
                 "category": "Webfejlesztés",
                 "description": "Pehelysúlyú statikus vállalati oldal egyedi arculattal és elrendezéssel.",
                 "tags": [
@@ -127,7 +127,7 @@
                 ]
             },
             "herrtrans": {
-                "title": "Herrtrans.hu — Autómentés és Autószállítás",
+                "title": "Herrtrans.hu",
                 "category": "WordPress",
                 "description": "Éjjel-nappali autómentés és járműszállítás Magyarországon.",
                 "tags": [

@@ -7,6 +7,8 @@
   --color-primary-hover: #B6D0E2;
   --color-accent: #B6D0E2;
   --color-dark: #1e293b;
+  /* Map global second color to existing palette for cross-file consistency */
+  --second-color: var(--color-dark);
   --color-bg-gradient-from: #0f172a;
   --color-bg-gradient-to: #1e293b;
   --color-text: #64748b;
