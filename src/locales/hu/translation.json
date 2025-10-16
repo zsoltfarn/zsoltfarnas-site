@@ -115,6 +115,37 @@
                     "Egyedi bővítmény",
                     "API integráció"
                 ]
+            },
+            "marquardt": {
+                "title": "Marquardt.de",
+                "category": "Webfejlesztés",
+                "description": "Pehelysúlyú statikus vállalati oldal egyedi arculattal és elrendezéssel.",
+                "tags": [
+                    "HTML",
+                    "CSS",
+                    "Vanilla JS"
+                ]
+            },
+            "herrtrans": {
+                "title": "Herrtrans.hu — Autómentés és Autószállítás",
+                "category": "WordPress",
+                "description": "Éjjel-nappali autómentés és járműszállítás Magyarországon.",
+                "tags": [
+                    "WordPress",
+                    "JavaScript",
+                    "SEO"
+                ]
+            },
+            "heera": {
+                "title": "Heera.hu",
+                "category": "WordPress",
+                "description": "Modern WordPress vállalati weboldal egyedi témával, JavaScript fejlesztésekkel, teljesítmény- és SEO-optimalizálással.",
+                "tags": [
+                    "WordPress",
+                    "JavaScript",
+                    "SEO",
+                    "Teljesítmény"
+                ]
             }
         },
         "viewProject": "Projekt megtekintése"

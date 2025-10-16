@@ -11,17 +11,9 @@ import realEstate1191 from '../img/real-estate-1191x767.webp';
 import realEstate1460 from '../img/real-estate-1460x941.webp';
 import realEstateOriginal from '../img/real-estate.webp';
 
-import fashion397 from '../img/fashion-397x256.webp';
-import fashion794 from '../img/fashion-794x512.webp';
-import fashion1191 from '../img/fashion-1191x767.webp';
-import fashion1460 from '../img/fashion-1460x941.webp';
-import fashionOriginal from '../img/fashion.webp';
 
-import restaurant397 from '../img/restaurant-397x256.webp';
-import restaurant794 from '../img/restaurant-794x512.webp';
-import restaurant1191 from '../img/restaurant-1191x767.webp';
-import restaurant1460 from '../img/restaurant-1460x941.webp';
-import restaurantOriginal from '../img/restaurant.webp';
+// Marquardt project image
+import marquardtMain from '../projects/marquardt/image/main-pic.jpg';
 
 const Portfolio: React.FC = () => {
 const { t } = useTranslation();
@@ -43,34 +35,41 @@ const portfolioData = [
     link: '/log-calculator/'
   },
   {
-    id: 2,
-    title: t('portfolio.items.fashionStore.title'),
-    category: t('portfolio.items.fashionStore.category'),
-    image: fashionOriginal,
+    id: 5,
+    title: t('portfolio.items.herrtrans.title'),
+    category: t('portfolio.items.herrtrans.category'),
+    image: 'https://herrtrans.hu/favicon.ico',
     imageSet: [
-      { src: fashion397, width: 397 },
-      { src: fashion794, width: 794 },
-      { src: fashion1191, width: 1191 },
-      { src: fashion1460, width: 1460 }
+      { src: 'https://herrtrans.hu/favicon.ico', width: 256 }
     ],
-    tags: t('portfolio.items.fashionStore.tags', { returnObjects: true }) as string[],
-    description: t('portfolio.items.fashionStore.description'),
-    link: '#'
+    tags: t('portfolio.items.herrtrans.tags', { returnObjects: true }) as string[],
+    description: t('portfolio.items.herrtrans.description'),
+    link: 'https://herrtrans.hu/'
   },
   {
-    id: 3,
-    title: t('portfolio.items.restaurantBooking.title'),
-    category: t('portfolio.items.restaurantBooking.category'),
-    image: restaurantOriginal,
+    id: 4,
+    title: t('portfolio.items.marquardt.title'),
+    category: t('portfolio.items.marquardt.category'),
+    image: marquardtMain,
     imageSet: [
-      { src: restaurant397, width: 397 },
-      { src: restaurant794, width: 794 },
-      { src: restaurant1191, width: 1191 },
-      { src: restaurant1460, width: 1460 }
+      { src: marquardtMain, width: 794 }
     ],
-    tags: t('portfolio.items.restaurantBooking.tags', { returnObjects: true }) as string[],
-    description: t('portfolio.items.restaurantBooking.description'),
-    link: '#'
+    tags: t('portfolio.items.marquardt.tags', { returnObjects: true }) as string[],
+    description: t('portfolio.items.marquardt.description'),
+    // Direct link to the static page in development; consider moving to public/ for production builds
+    link: '/src/projects/marquardt/index.html'
+  },
+  {
+    id: 6,
+    title: t('portfolio.items.heera.title'),
+    category: t('portfolio.items.heera.category'),
+    image: 'https://www.heera.hu/_next/image?url=%2Fimages%2Fhero-photo.jpeg&w=640&q=75',
+    imageSet: [
+      { src: 'https://www.heera.hu/_next/image?url=%2Fimages%2Fhero-photo.jpeg&w=640&q=75', width: 256 }
+    ],
+    tags: t('portfolio.items.heera.tags', { returnObjects: true }) as string[],
+    description: t('portfolio.items.heera.description'),
+    link: 'https://heera.hu/'
   },
   
 ];

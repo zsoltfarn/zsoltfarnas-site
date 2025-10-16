@@ -74,37 +74,47 @@
         "ecommerce": "E-commerce"
     },
     "viewAll": "View All Projects",
-    "items": {
-        "logCalculator": {
-            "title": "Log Volume Calculator",
-            "category": "Web Development",
-            "description": "Calculate the cubic volume of wood logs quickly and accurately.",
-            "tags": [
-                "React",
-                "Node.js"
-            ]
+        "items": {
+            "logCalculator": {
+                "title": "Log Volume Calculator",
+                "category": "Web Development",
+                "description": "Calculate the cubic volume of wood logs quickly and accurately.",
+                "tags": [
+                    "React",
+                    "Node.js"
+                ]
+            },
+            "marquardt": {
+                "title": "Marquardt.de",
+                "category": "Web Development",
+                "description": "A lightweight static corporate concept page with custom branding and layout.",
+                "tags": [
+                    "HTML",
+                    "CSS",
+                    "Vanilla JS"
+                ]
+            },
+            "herrtrans": {
+                "title": "Herrtrans.hu",
+                "category": "WordPress",
+                "description": "24/7 vehicle rescue and transport across Hungary.",
+                "tags": [
+                    "WordPress",
+                    "JavaScript",
+                    "SEO"
+                ]
+            },
+            "heera": {
+                "title": "Heera.hu",
+                "category": "Next.js",
+                "description": "Modern WordPress business site with custom theme.",
+                "tags": [
+                    "Next.js",
+                    "JavaScript",
+                    "SEO"
+                ]
+            }
         },
-        "fashionStore": {
-            "title": "Fashion E-commerce Store",
-            "category": "E-commerce",
-            "description": "A high-converting fashion store with custom product filters.",
-            "tags": [
-                "WooCommerce",
-                "WordPress",
-                "Custom Theme"
-            ]
-        },
-        "restaurantBooking": {
-            "title": "Restaurant Booking System",
-            "category": "WordPress",
-            "description": "An automated reservation system with table management and SMS notifications.",
-            "tags": [
-                "WordPress",
-                "Custom Plugin",
-                "API Integration"
-            ]
-        }
-    },
     "viewProject": "View Project"
 },
 "pricing": {

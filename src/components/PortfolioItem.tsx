@@ -17,6 +17,7 @@ interface PortfolioItemProps {
     tags: string[];
     description: string;
     link?: string;  // Added this line
+    fit?: 'cover' | 'contain';
   };
   onMouseEnter: () => void;
   onMouseLeave: () => void;
@@ -51,6 +52,7 @@ const PortfolioItem: React.FC<PortfolioItemProps> = ({
           sizes={sizes}
           alt={item.title}
           className="portfolio-item-image"
+          style={item.fit === 'contain' ? { objectFit: 'contain', height: '100%', transform: 'none', backgroundColor: '#000' } : undefined}
           loading="lazy"
         />
         <div className="portfolio-item-gradient" />
@@ -66,7 +68,12 @@ const PortfolioItem: React.FC<PortfolioItemProps> = ({
             </span>
           ))}
         </div>
-        <a href={item.link || "#"} className="portfolio-item-link">
+        <a
+          href={item.link || "#"}
+          className="portfolio-item-link"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           {t('portfolio.viewProject')}
           <ExternalLink size={16} className="portfolio-item-link-icon" />
         </a>
