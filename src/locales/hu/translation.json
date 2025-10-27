@@ -139,12 +139,11 @@
             "heera": {
                 "title": "Heera.hu",
                 "category": "WordPress",
-                "description": "Modern WordPress vállalati weboldal egyedi témával, JavaScript fejlesztésekkel, teljesítmény- és SEO-optimalizálással.",
+                "description": "Modern WordPress vállalati weboldal egyedi témával.",
                 "tags": [
                     "WordPress",
                     "JavaScript",
-                    "SEO",
-                    "Teljesítmény"
+                    "SEO"
                 ]
             }
         },

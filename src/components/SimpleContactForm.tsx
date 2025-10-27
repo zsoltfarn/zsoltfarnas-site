@@ -46,8 +46,10 @@ const SimpleContactForm: React.FC = () => {
       }),
     })
       .then(() => {
-        setShowSuccessPopup(true);
+        // Redirect to confirmation page after successful submission
+        // Keep resetting the form state for safety before redirect
         setFormState(initialFormState);
+        window.location.assign('/message-sent.html');
       })
       .catch((error) => {
         console.error("Form submission error:", error);
@@ -63,6 +65,7 @@ const SimpleContactForm: React.FC = () => {
       <form
         name="contact"
         method="POST"
+        action="/message-sent.html"
         data-netlify="true"
         netlify-honeypot="bot-field"
         onSubmit={handleSubmit}

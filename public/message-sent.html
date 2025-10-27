@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Message Sent | ZSF Studio</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+    <style>
+      :root {
+        --color-bg-gradient-from: #0f172a;
+        --color-bg-gradient-to: #1e293b;
+        --color-primary: #6082B6;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(to right, var(--color-bg-gradient-from), var(--color-bg-gradient-to));
+        color: #fff;
+        font-family: 'Poppins', sans-serif;
+      }
+      .card {
+        background: rgba(255,255,255,0.08);
+        border: 1px solid rgba(255,255,255,0.2);
+        border-radius: 16px;
+        padding: 2rem;
+        max-width: 640px;
+        margin: 1rem;
+        text-align: center;
+        backdrop-filter: saturate(120%) blur(6px);
+      }
+      .title { font-size: 1.875rem; font-weight: 700; margin: 0 0 0.75rem; }
+      .desc { font-size: 1rem; opacity: 0.9; margin-bottom: 1.5rem; }
+      .actions { display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap; }
+      .btn {
+        display: inline-block;
+        padding: 0.625rem 1.25rem;
+        border-radius: 9999px;
+        color: #fff;
+        text-decoration: none;
+        border: 2px solid #fff;
+        transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+      }
+      .btn.primary { background-color: var(--color-primary); border-color: var(--color-primary); }
+      .btn:hover { transform: translateY(-2px); }
+      .btn.primary:hover { background-color: #B6D0E2; color: #1e293b; border-color: #B6D0E2; }
+      .btn.secondary:hover { background-color: #fff; color: #0f172a; border-color: #fff; }
+      .icon {
+        width: 64px;
+        height: 64px;
+        margin: 0 auto 1rem;
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="card" role="main" aria-labelledby="msg-title">
+      <svg class="icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <circle cx="12" cy="12" r="10" stroke="#B6D0E2" stroke-width="2"></circle>
+        <path d="M8 12l2.5 2.5L16 9" stroke="#B6D0E2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+      </svg>
+      <h1 id="msg-title" class="title">Thank you!</h1>
+      <p class="desc">Your message has been sent successfully. We’ll get back to you as soon as possible.</p>
+      <div class="actions">
+        <a class="btn primary" href="/">Go back to Home</a>
+        <a class="btn secondary" href="/#contact">Send another message</a>
+      </div>
+    </main>
+  </body>
+  </html>
