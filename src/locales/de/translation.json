@@ -1,0 +1,157 @@
+{
+  "navbar": {
+    "home": "Startseite",
+    "about": "Über uns",
+    "portfolio": "Portfolio",
+    "services": "Leistungen",
+    "work": "Arbeiten",
+    "contact": "Kontakt",
+    "getstarted": "Jetzt starten",
+    "blog": "Blog"
+  },
+  "hero": {
+    "title": "Digitale Erlebnisse, die Unternehmen <1>transformieren</1>",
+    "desc": "Wir entwerfen beeindruckende Websites, entwickeln leistungsstarke WordPress‑Lösungen und liefern professionelle SEO‑Optimierung – alles mit dem Ziel, Wachstum zu fördern, Ihre Zielgruppe zu begeistern und Ihre Marke in der digitalen Welt zu stärken.",
+    "viewWork": "Unsere Projekte ansehen",
+    "getInTouch": "Kontakt aufnehmen"
+  },
+  "contact": {
+    "title": "Kontakt aufnehmen",
+    "description": "Bereit, Ihr Projekt zu starten? Kontaktieren Sie uns für eine kostenlose Beratung und ein Angebot."
+  },
+  "contactForm": {
+    "name": "Name",
+    "email": "E‑Mail",
+    "phone": "Telefon",
+    "service": "Interessierter Service",
+    "message": "Nachricht",
+    "placeholderName": "Ihr Name",
+    "placeholderEmail": "ihr.email@beispiel.de",
+    "placeholderPhone": "(Optional)",
+    "placeholderMessage": "Erzählen Sie uns von Ihrem Projekt...",
+    "optionWebDev": "Webentwicklung",
+    "optionWordPress": "WordPress‑Entwicklung",
+    "optionEcommerce": "E‑Commerce‑Lösung",
+    "optionUIUX": "UI/UX‑Design",
+    "optionMaintenance": "Webseiten‑Wartung",
+    "send": "Senden",
+    "sending": "Wird gesendet...",
+    "successTitle": "Vielen Dank!",
+    "successMsg1": "Ihre Nachricht wurde erfolgreich gesendet.",
+    "successMsg2": "Wir melden uns in Kürze bei Ihnen.",
+    "error": "Beim Senden Ihrer Nachricht ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut.",
+    "required": "Pflichtfeld",
+    "invalidEmail": "Bitte geben Sie eine gültige E‑Mail‑Adresse ein.",
+    "invalidPhone": "Bitte geben Sie eine gültige Telefonnummer ein.",
+    "invalidService": "Bitte wählen Sie einen Service aus.",
+    "requiredFieldsPopup": "Bitte füllen Sie alle Pflichtfelder aus, bevor Sie absenden."
+  },
+  "services": {
+    "services-title": "Unsere Leistungen",
+    "services-description": "Wir bieten ein umfassendes Spektrum an Webentwicklung und WordPress‑Dienstleistungen, um Ihr Unternehmen online erfolgreich zu machen.",
+    "webdev-title": "Webentwicklung",
+    "webdev-desc": "Individuelle Websites mit modernen Technologien – leistungsstark, skalierbar und nutzerfreundlich.",
+    "wordpress-title": "WordPress‑Entwicklung",
+    "wordpress-desc": "Professionelle WordPress‑Websites mit eigenen Themes, Plugins und Optimierungen für Geschwindigkeit und Sicherheit.",
+    "responsive-title": "Responsives Design",
+    "responsive-desc": "Mobile‑First‑Websites für nahtlose Erlebnisse auf allen Geräten und Bildschirmgrößen.",
+    "ecommerce-title": "E‑Commerce‑Lösungen",
+    "ecommerce-desc": "Online‑Shops mit sicherer Zahlungsabwicklung, Warenverwaltung und optimierten Checkout‑Abläufen.",
+    "uiux-title": "UI/UX‑Design",
+    "uiux-desc": "Nutzerzentriertes Design für intuitive, ansprechende und visuell überzeugende Interfaces.",
+    "maintenance-title": "Webseiten‑Wartung",
+    "maintenance-desc": "Laufende Betreuung, Updates und Optimierungen für Sicherheit und Spitzenleistung Ihrer Website.",
+    "learn-more": "Mehr erfahren"
+  },
+  "portfolio": {
+    "title": "Unsere Projekte",
+    "description": "Entdecken Sie unsere aktuellen Projekte und sehen Sie, wie wir Unternehmen bei der Erreichung ihrer digitalen Ziele unterstützt haben.",
+    "categories": {
+      "all": "Alle",
+      "webdev": "Webentwicklung",
+      "wordpress": "WordPress",
+      "ecommerce": "E‑Commerce"
+    },
+    "viewAll": "Alle Projekte ansehen",
+    "items": {
+      "logCalculator": {
+        "title": "Holzstamm‑Volumenrechner",
+        "category": "Webentwicklung",
+        "description": "Berechnen Sie das Kubikvolumen von Holzstämmen schnell und präzise.",
+        "tags": ["React", "Node.js"]
+      },
+      "marquardt": {
+        "title": "Marquardt Container",
+        "category": "Webentwicklung",
+        "description": "Eine leichte, statische Unternehmens‑Konzeptseite.",
+        "tags": ["HTML", "CSS", "Vanilla JS"]
+      },
+      "herrtrans": {
+        "title": "Herrtrans.hu",
+        "category": "WordPress",
+        "description": "24/7 Fahrzeugbergung und ‑transport in ganz Ungarn.",
+        "tags": ["WordPress", "JavaScript", "SEO"]
+      },
+      "heera": {
+        "title": "Heera.hu",
+        "category": "Next.js",
+        "description": "Moderne WordPress‑Unternehmensseite mit individuellem Theme.",
+        "tags": ["Next.js", "JavaScript", "SEO"]
+      }
+    },
+    "viewProject": "Projekt ansehen"
+  },
+  "pricing": {
+    "section-title": "Transparente Preise",
+    "section-description": "Wählen Sie den passenden Plan für Ihre Geschäftsanforderungen. Alle Pläne beinhalten unseren Premium‑Support und eine Zufriedenheitsgarantie.",
+    "plans": {
+      "basic": {
+        "name": "Basis‑Website",
+        "features": [
+          "Individuelles Design",
+          "Mobil responsiv",
+          "5 Seiten",
+          "Kontaktformular",
+          "Basis‑SEO‑Setup",
+          "2 Korrekturrunden"
+        ]
+      },
+      "pro": {
+        "name": "Professionelles WordPress",
+        "features": [
+          "Individuelles WordPress‑Theme",
+          "E‑Commerce bereit",
+          "10 Seiten",
+          "Erweiterte Kontaktformulare",
+          "SEO‑Optimierung",
+          "Performance‑Optimierung",
+          "3 Korrekturrunden",
+          "1 Monat Support"
+        ]
+      },
+      "enterprise": {
+        "name": "Enterprise‑Lösung",
+        "features": [
+          "Individuelle Web‑Applikation",
+          "Erweiterte Funktionalität",
+          "Unbegrenzte Seiten",
+          "Individuelle Features & Plugins",
+          "Erweiterte Sicherheit",
+          "Premium‑SEO‑Paket",
+          "Unbegrenzte Korrekturen",
+          "6 Monate Support"
+        ]
+      }
+    },
+    "most-popular": "Beliebtestes Angebot",
+    "price-desc": "einmalig",
+    "get-started": "Jetzt starten"
+  },
+  "footer": {
+    "footer-text": "Professionelle Webentwicklungsdienste mit Fokus auf schöne, funktionale und benutzerfreundliche Websites für Unternehmen jeder Größe.",
+    "quick-links": "Schnellzugriff",
+    "pricing": "Preise",
+    "contact-info": "Kontaktinformationen",
+    "copyright": "Alle Rechte vorbehalten."
+  }
+}

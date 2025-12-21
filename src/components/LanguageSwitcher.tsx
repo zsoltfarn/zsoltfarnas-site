@@ -26,6 +26,17 @@ const languages = [
       />
     )
   },
+  {
+    code: 'de',
+    label: 'DE',
+    flag: (
+      <span
+        className="fi fi-de"
+        style={{ display: 'inline-block', width: 18, height: 12 }}
+        aria-hidden="true"
+      />
+    )
+  },
 ];
 
 const LanguageSwitcher: React.FC = () => {

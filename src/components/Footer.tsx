@@ -47,11 +47,6 @@ const Footer: React.FC = () => {
                 </a>
               </li>
               <li>
-                <a href="#pricing" className="footer-menu-link">
-                  <Trans i18nKey="footer.pricing">Pricing</Trans>
-                </a>
-              </li>
-              <li>
                 <a href="#contact" className="footer-menu-link">
                   <Trans i18nKey="navbar.contact">Contact</Trans>
                 </a>

@@ -3,7 +3,7 @@ import { initReactI18next } from 'react-i18next';
 import en from './locales/en/translation.json';
 import hu from './locales/hu/translation.json';
 // import ro from './locales/ro/translation.json';
-// import de from './locales/de/translation.json';
+import de from './locales/de/translation.json';
 
 i18n
   .use(initReactI18next)
@@ -12,7 +12,7 @@ i18n
       en: { translation: en },
       hu: { translation: hu },
       //ro: { translation: ro },
-      //de: { translation: de }
+      de: { translation: de }
     },
     lng: 'en',
     fallbackLng: 'en',
