@@ -35,7 +35,7 @@ const Navbar: React.FC = () => {
       className={`navbar ${isScrolled ? 'navbar-scrolled' : 'navbar-top'}`}
       style={{ color: isLogCalculator && !isScrolled ? '#000' : '#fff' }}
     >
-      <div className="container mx-auto px-4 md:px-14 flex justify-between items-center">
+      <div className="container mx-auto px-4 md:px-14 flex justify-start items-center gap-8">
         <div className="flex items-center">
           <Link href="/" className="flex items-center">
             <img
@@ -45,8 +45,8 @@ const Navbar: React.FC = () => {
             />
           </Link>
         </div>
-        {/* Desktop Menu */}
-        <div className="hidden md:flex items-center space-x-10">
+        {/* Desktop Menu (left) */}
+        <div className="hidden md:flex items-center space-x-8">
           {['navbar.home', 'navbar.services', 'navbar.portfolio', 'navbar.contact'].map((key, idx) => (
             <Link 
               key={key}
@@ -56,6 +56,9 @@ const Navbar: React.FC = () => {
               {t(key)}
             </Link>
           ))}
+        </div>
+        {/* Desktop Controls (right) */}
+        <div className="hidden md:flex items-center ml-auto space-x-4">
           <button className="get-started-btn">
             {t("navbar.getstarted")}
             <ChevronRight size={18} className="get-started-chevron" />
@@ -84,7 +87,7 @@ const Navbar: React.FC = () => {
               <Link 
                 key={key}
                 href={idx === 3 ? '/about' : `#${['home', 'services', 'portfolio', 'contact'][idx]}`}
-                className="block font-medium text-gray-700 hover:text-teal-600"
+                className="block navbar-link font-medium"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {t(key)}
